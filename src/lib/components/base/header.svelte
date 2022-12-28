@@ -8,7 +8,7 @@
     <div class = "nav-links">
       <a href="/">home</a>
       <a href="/blog">blog</a>
-      <a href="#">resume</a>
+      <a href="/resume.docx">resume</a>
     </div>
 	</nav>
 </header>
