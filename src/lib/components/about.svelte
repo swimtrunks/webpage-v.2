@@ -74,6 +74,9 @@
     }
     #about-me-text{
         width: 50%;
+		@media (max-width:600px) {
+		width: 75%;
+		}
     }
     #about-me-subtitle{
         margin-top: .25rem;

@@ -19,10 +19,15 @@
 	<ProjectSection />
 </div>
 
-<style>
+<style lang="scss">
     .homepage{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+	@media(max-width:800px) {
+		align-items: unset;
+		}
     }
+
 </style>
