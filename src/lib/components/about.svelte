@@ -12,7 +12,7 @@
     </div>
 	<section class = "about-me-core">
 		<div class="image-wrapper">
-			<img src="images/me-and-lup.jpg" alt="" />
+			<img src="images/me-and-lup.png" alt="" />
 			<Socials />
 		</div>
 		<div id="about-me-text">
@@ -64,10 +64,21 @@
 	}
 	.image-wrapper {
 		img {
+			animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
 			box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
 				0px 9px 46px 8px rgba(0, 0, 0, 0.06);
 		}
-		width: 50%;
+		max-width: 484px;
+		@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 	}
     h1{
         margin-bottom: 0;

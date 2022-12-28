@@ -4,7 +4,7 @@
     <div class="shape-2" />
   </div>
   <nav>
-    <img class = "logo" src = "images/logo/rough-logo.png" alt ="logo" />
+    <img class = "logo" src = "images/logo/opti-logo.png" alt ="logo" />
     <div class = "nav-links">
       <a href="/">home</a>
       <a href="/blog">blog</a>
@@ -35,6 +35,9 @@
 				transition: 800ms;
 				color: rgb(8, 69, 8);
 			}
+		}
+		img{
+			width:100%
 		}
 	}
   .nav-links{

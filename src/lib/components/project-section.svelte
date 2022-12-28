@@ -4,20 +4,20 @@
 </script>
 
 <section class="projects-section">
-	<div id="project-section-header">
-		<div id="project-section-header">
-			<h2>client work</h2>
-			<p>- some stuff i am proud to have been apart of</p>
-		</div>
-	</div>
 	<div id="projects">
+		<div class="project-card" id="project-section-header">
+			<div>
+				<h2>client work</h2>
+				<p>some stuff i am proud to have been apart of</p>
+			</div>
+		</div>
 		{#each clients as client}
 			<div class="project-card">
 				<img class="project-image" src={client.thumbnail} alt="" />
 				<div class="project-description">
 					<h4>{client.title}</h4>
 					<p>{client.description}</p>
-					<p>{client.link}</p>
+					<a href = {client.link}> visit site </a>
 				</div>
 			</div>
 		{/each}
@@ -67,13 +67,26 @@
 		max-width: 50%;
 	}
 	#project-section-header {
+		//reset card styling
+		background-color: transparent;
+		border-radius: unset;
+		box-shadow: unset;
+		
+		//
+		justify-content: center;
+		align-items: unset;
 		h2 {
 			margin-bottom: 0;
 		}
 		p {
 			font-weight: 400;
+			margin: 0;
 			color: grey;
-			margin-top: 0.1rem;
+		}
+		div{
+			background-color: rgba(239, 244, 240, 0.117);
+			padding: 1rem;
+			border-radius: 1rem;
 		}
 	}
 </style>

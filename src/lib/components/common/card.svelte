@@ -2,8 +2,8 @@
 	export let post;
 </script>
 
-<a class="click-card" href="/blog/{post.slug}">
-	<img src="/images/placeholder-thumbnail.webp" alt="" />
+<a class="click-card" href="/{post.slug}">
+	<img src="/images/opti-placeholder-thumbnail.png" alt="" />
 	<div class="card-divider" />
 	<div class="card-content">
 		<h4>{post.title}</h4>
@@ -23,6 +23,10 @@
 		flex-direction: column;
 		width: 20%;
 		height: 20rem;
+		//TODO: handle responsiveness here for tablet / mid sizes
+		img{
+			max-width: 275px;
+		}
 		
 		@media (max-width: 855px){
 			height: 22rem;

@@ -1,30 +1,23 @@
 const clients = [
 	{
-		title: 'Mama Knows',
+		title: 'Richardson Family & Ed Consulting',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
-		thumbnail: '/images/mamaknows-thumb.png',
+			'Richardson Family & Ed Consulting provides a brave and inclusive community where we engage in learning about new people places, and perspectives. This includes "Mama Knows", an outreach program that helps families learn and teach others about new people places and perspectives',
+		thumbnail: '/images/opti-mamaknows-thumb.png',
 		link: 'http://tristanrichardson.com/'
 	},
-	// {
-	// 	title: 'Sesame Workshop',
-	// 	description:
-	// 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
-	// 	thumbnail: '/images/sesameworkshop-thumb.png',
-	// 	link: 'https://www.sesameworkshop.org/'
-	// },
 	{
 		title: 'Drizly',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
-		thumbnail: '/images/drizly-thumb.png',
+			'Drizly lets you shop a huge selection of beer, wine and liquor and get it delivered to your door in under 60 minutes. It’s super simple and lets you get back to doing whatever you’re doing.',
+		thumbnail: '/images/opti-drizly-thumb.png',
 		link: 'https://drizly.com/'
 	},
 	{
 		title: 'SageSure',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
-		thumbnail: '/images/sagesure-thumb.png',
+			'SageSure partners with many highly rated insurance carriers to serve the various needs of our markets. Unlike a traditional managing general underwriter, SageSure actually designs, develops and files our proprietary homeowners and commercial BOP products ourselves.',
+		thumbnail: '/images/opti-sagesure-thumb.png',
 		link: 'https://www.sagesure.com/'
 	}
 ];

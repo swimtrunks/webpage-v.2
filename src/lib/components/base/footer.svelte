@@ -1,3 +1,7 @@
+<script>
+	import Socials from '$lib/components/socials.svelte';
+</script>
+
 <footer>
 	<p>© 2022 Malcolm Peterson. Made <strong>NOWHERE.</strong></p>
 	<h5>
@@ -5,6 +9,7 @@
 		Avatar by
 		<a href="http://www.shaferbrown.com/" rel="noreferrer" target="_blank">Shafer Brown</a>.
 	</h5>
+
 </footer>
 
 <style lang="scss">
