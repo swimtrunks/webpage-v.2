@@ -21,8 +21,15 @@
 		margin-top: 1rem;
 		display: flex;
 		align-items: center;
+		@media (max-width: 855px){
+			flex-direction: column;
+		}
 	}
 	#recent-posts-title-card {
-		width: 25%;
+		padding-left: 2rem;
+		// width: 25%;
+		@media (max-width: 1000px){
+			padding-left : unset
+		}
 	}
 </style>

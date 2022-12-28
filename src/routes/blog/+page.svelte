@@ -5,6 +5,6 @@
 
 {#each posts as post}
 	<div>
-		<a href="/blog/{post.slug}">this is a post</a>
+		<a href="/blog/{post.slug}">{post.title} // {post.date}</a>
 	</div>
 {/each}

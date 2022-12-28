@@ -23,6 +23,11 @@
 		flex-direction: column;
 		width: 20%;
 		height: 20rem;
+		
+		@media (max-width: 855px){
+			height: 22rem;
+			width: 50%
+		}
 	}
 	.card-divider {
 		margin-top: 1rem;
@@ -43,4 +48,7 @@
 			color: black;
 		}
 	}
+
+
+	
 </style>

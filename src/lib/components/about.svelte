@@ -10,7 +10,7 @@
 	    	<span class="edit-text">fun of</span> content about it
 	    </p>
     </div>
-	<section>
+	<section class = "about-me-core">
 		<div class="image-wrapper">
 			<img src="images/me-and-lup.jpg" alt="" />
 			<Socials />
@@ -26,8 +26,8 @@
 				<a href="https://svelte.dev/blog/announcing-sveltekit-1.0" rel="noreferrer" target="_blank"
 					>SvelteKit v.1
 				</a>(you can check out the code
-				<a href="https://github.com/swimtrunks" rel="noreferrer" target="_blank">here</a>
-				or read about the process of making it <a href="#">here</a>).
+				<a href="https://github.com/swimtrunks/webpage-v.2" rel="noreferrer" target="_blank">here</a>
+				or read about the process of making it <a href="/blog/sveltekit-website-redesign">here</a>).
 				<br /> <br />
 				When not at work I am typically hanging with my wife and dog, listening to new music as well
 				as obsessing over how I better
@@ -50,8 +50,17 @@
 
 <style lang="scss">
 	.about-me {
+		display: flex;
+		flex-direction: column;
 		background-image: radial-gradient(circle at 1px 1px, rgb(210, 193, 168) 1px, transparent 0);
 		background-size: 30px 30px;        
+	}
+	.about-me-core{
+		display: flex;
+		@media (max-width: 855px){
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	.image-wrapper {
 		img {
