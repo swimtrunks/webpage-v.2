@@ -78,6 +78,10 @@
 			top: -7rem;
 			left: -16rem;
 		}
+		@media (max-width:400px) {
+			top: -7rem;
+			left: -336px
+		}
 	}
 	.shape {
 		width: 400px;
@@ -98,6 +102,10 @@
 			width: 4rem;
 			bottom: -8.75rem;
 			left: 0rem;
+		}
+		@media (max-width:400px) {
+			bottom: -12rem;
+			left: -8rem
 		}
 	}
 	@keyframes blob {

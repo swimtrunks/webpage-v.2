@@ -59,6 +59,9 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
+		@media (max-width:400px) {
+			width: 260px
+		}
 	}
 	.project-image {
 		max-width: 50%;
