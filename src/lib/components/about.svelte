@@ -23,7 +23,7 @@
 				the web professionally over at
 				<a id="postlight" href="https://postlight.com" rel="noreferrer" target="_blank">Postlight</a
 				>. I also built this website with
-				<a href="https://svelte.dev/blog/announcing-sveltekit-1.0" rel="noreferrer" target="_blank"
+				<a href="https://svelte.dev/announcing-sveltekit-1.0" rel="noreferrer" target="_blank"
 					>SvelteKit v.1
 				</a>(you can check out the code
 				<a href="https://github.com/swimtrunks/webpage-v.2" rel="noreferrer" target="_blank">here</a>
