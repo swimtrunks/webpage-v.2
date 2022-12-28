@@ -6,13 +6,13 @@ const clients = [
 		thumbnail: '/images/mamaknows-thumb.png',
 		link: 'http://tristanrichardson.com/'
 	},
-	{
-		title: 'Sesame Workshop',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
-		thumbnail: '/images/sesameworkshop-thumb.png',
-		link: 'https://www.sesameworkshop.org/'
-	},
+	// {
+	// 	title: 'Sesame Workshop',
+	// 	description:
+	// 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolore nobis architecto alias nisi eum atque optio assumenda commodi voluptates iste, accusamus quisquam culpa neque consectetur, iure itaque, blanditiis fugit.',
+	// 	thumbnail: '/images/sesameworkshop-thumb.png',
+	// 	link: 'https://www.sesameworkshop.org/'
+	// },
 	{
 		title: 'Drizly',
 		description:
