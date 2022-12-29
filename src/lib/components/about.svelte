@@ -1,5 +1,24 @@
 <script>
 	import Socials from '$lib/components/socials.svelte';
+
+//just for goofs
+let startPets, endPets;
+function startedPetting() {
+  startPets = new Date();
+  console.log("Lupin approaches.")
+}
+function stoppedPetting() {
+  endPets = new Date();
+  var timeDiff = endPets - startPets; //in ms
+  timeDiff /= 1000;
+  var seconds = Math.round(timeDiff % 60);
+  if(seconds<=9){
+  	console.log(`You only pet Lupin for ${seconds} seconds... He walked away disappointed.`);
+  }else if(seconds>9){
+  	console.log(`WOW, you pet Lupin for ${seconds} seconds! He seems to be satisfied.`)
+	}
+}
+//
 </script>
 
 <div class="about-me">
@@ -11,10 +30,14 @@
 		</p>
 	</div>
 	<section class="about-me-core">
-		<div class="image-wrapper">
-			<img src="images/malcolm-portrait.webp" alt="" />
+		<div>
+			<div class="image-wrapper" on:mouseenter={startedPetting} on:mouseleave={stoppedPetting} >
+				<img id="under-image" src="images/malcolm-portrait.webp" alt="a drawing of me alone with an assortment of my interest illustrated in the background" />
+				<img id="over-image" src="images/me-and-lup.png" alt="a drawing of me and my dog lupin with an assortment of my interest illustrated in the background">
+			</div>
 			<Socials />
 		</div>
+		
 		<div id="about-me-text">
 			<div>
 				<h2>I'm a full stack software engineer with a focus on front-end and accessiblity</h2>
@@ -63,23 +86,20 @@
 			align-items: center;
 		}
 	}
+	#over-image{
+		position: absolute;
+		left:0;
+		display: none;
+	}
 	.image-wrapper {
-		img {
-			animation: fadeInAnimation ease 1s;
-			animation-iteration-count: 1;
-			animation-fill-mode: forwards;
-			box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
-				0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+		position: relative;
+		&:hover{
+			cursor: grab;
+			#over-image{
+				display: unset;
+			}
 		}
 		max-width: 484px;
-		@keyframes fadeInAnimation {
-			0% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
 	}
 	h1 {
 		margin-bottom: 0;
@@ -109,6 +129,7 @@
 		font-weight: bold;
 		&:hover {
 			transition: 300ms;
+			text-decoration:underline;
 			color: rgb(250, 0, 0);
 		}
 	}

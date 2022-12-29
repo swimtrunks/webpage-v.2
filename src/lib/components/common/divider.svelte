@@ -1,14 +1,14 @@
 <script>
-	export let dividerText;
+	// export let dividerText;
 </script>
 
 <div class="divider-container">
 	<div class="divider-border" />
-	{#if dividerText}
+	<!-- {#if dividerText}
 		<span class="divider-content">
 			{dividerText}
 		</span>
-	{/if}
+	{/if} -->
 	<div class="border" />
 </div>
 

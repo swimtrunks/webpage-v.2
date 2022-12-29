@@ -1,6 +1,6 @@
 <script>
-	export let text;
-	export let link;
+	// export let text;
+	// export let link;
 </script>
 
 <div class="blog-button">
