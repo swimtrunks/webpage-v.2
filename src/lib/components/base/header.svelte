@@ -23,7 +23,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-    justify-content: space-between;
+    	justify-content: space-between;
 		position: relative;
 		a {
 			display: block;
@@ -37,6 +37,7 @@
 			}
 		}
 		img{
+			max-width: 80px;
 			width:100%
 		}
 	}
@@ -48,10 +49,6 @@
     width: 150px;
     box-shadow: unset;
   }
-	//shape animations
-  //mobile overflow x will not work: 
-  //mobile shape 1 : 340 x 340 / alter left position
-  //mobile shape 2 : 300 x 800
 	.shape-container {
 		bottom: 100px;
 		left: 370px;

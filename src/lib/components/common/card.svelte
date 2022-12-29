@@ -40,6 +40,7 @@
 			width: 260px;
 		}
 	}
+	// TODO: implement divider component instead
 	.card-divider {
 		margin-top: 1rem;
 		width: 5rem;
@@ -60,6 +61,9 @@
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
+			@media (max-width: 400px){
+			font-size: .75rem;
+		}
 		}
 		p {
 			color: black;

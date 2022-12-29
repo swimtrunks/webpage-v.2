@@ -89,4 +89,9 @@
 			border-radius: 1rem;
 		}
 	}
+	.project-description{
+		@media (max-width:400px) {
+				font-size: .75rem;
+			}
+	}
 </style>

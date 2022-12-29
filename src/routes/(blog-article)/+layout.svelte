@@ -25,3 +25,10 @@
 		</article>
 	</main>
 </div>
+
+<style>
+	.header{
+		text-align: center;
+		font-size: 1.5rem;
+	}
+</style>

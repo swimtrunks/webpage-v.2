@@ -3,9 +3,11 @@ import filteredPosts from '../../lib/posts.js';
 
 export async function load() {
 	const result = Object.keys(filteredPosts).map((index) => {
-		const { slug, title, date, excerpt, tags } = filteredPosts[index];
+		const { slug, title, date, excerpt, tags, featured, coverImage } = filteredPosts[index];
 		return {
 			slug,
+			coverImage,
+			featured,
 			title,
 			date,
 			excerpt,
