@@ -3,12 +3,11 @@ slug: 'owning-your-okayness'
 title: 'Owning Your Okayness: The Art of Asking Questions'
 date: '2021-10-26'
 updated: '2022-08-01'
+featured: true
 categories:
   - 'sveltekit'
   - 'markdown'
-coverImage: ''
-coverWidth: 16
-coverHeight: 9
+coverImage: 'images/placeholder-feat.webp'
 excerpt: Walk through this framework to hone your question asking skills.
 ---
 

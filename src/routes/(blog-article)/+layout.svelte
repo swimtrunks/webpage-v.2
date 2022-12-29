@@ -1,7 +1,5 @@
 <script>
 	import '$lib/styles/global.scss';
-	import Header from '$lib/components/base/header.svelte';
-	import Footer from '$lib/components/base/footer.svelte';
 	export let data;
 	$: ({ post } = data);
 </script>

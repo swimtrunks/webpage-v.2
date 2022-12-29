@@ -1,4 +1,5 @@
 <script>
+	import '$lib/styles/global.scss';
 	import FeaturedPost from '$lib/components/featured-post.svelte';
 	export let data;
 	let { posts } = data;
