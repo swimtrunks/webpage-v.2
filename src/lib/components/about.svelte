@@ -22,10 +22,10 @@
 				<strong>Hi</strong>, I am a self-taught software engineer currently making cool stuff for
 				the web professionally over at
 				<a id="postlight" href="https://postlight.com" rel="noreferrer" target="_blank">Postlight</a
-				>. I also built this website with
+				>. (<strong>sidenote: </strong>I built this website with
 				<a href="https://svelte.dev/blog/announcing-sveltekit-1.0" rel="noreferrer" target="_blank"
-					>SvelteKit v.1
-				</a>(you can check out the code
+					>SvelteKit v.1!
+				</a>You can check out the code
 				<a href="https://github.com/swimtrunks/webpage-v.2" rel="noreferrer" target="_blank">here</a>
 				or read about the process of making it <a href="/sveltekit-website-redesign">here</a>).
 				<br /> <br />
@@ -39,10 +39,9 @@
 				and inclusion, accessiblity, architecture and music (so feel free to ask me anything about these).
 				<br /><br />
 				<strong>Core Proficiencies:</strong> <br />
-				HTML,CSS[SASS,LESS], JavaScript[React, Next, Svelte & Sveltekit], Python, Node, GraphQL, REST
-				APIs
+				&#x2022;HTML &#x2022;CSS[SASS,LESS] &#x2022;JavaScript[React, Next, Svelte & Sveltekit] &#x2022;Python &#x2022;Node &#x2022;GraphQL &#x2022; REST APIs
 				<br /><br />
-				<strong>Other:</strong> Figma, Git,LaunchDarkly, Mixpanel
+				<strong>Other:</strong> &#x2022;Figma &#x2022;Git &#x2022;LaunchDarkly &#x2022;Mixpanel
 			</div>
 		</div>
 	</section>
