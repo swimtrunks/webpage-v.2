@@ -24,19 +24,19 @@
 		width: 20%;
 		height: 20rem;
 		//TODO: handle responsiveness here for tablet / mid sizes
-		img{
+		img {
 			max-width: 275px;
 		}
-		@media (max-width: 855px){
+		@media (max-width: 855px) {
 			flex-direction: row;
 			height: 10rem;
 			width: 100%;
 			max-width: 400px;
-			img{
-				width: 50%
+			img {
+				width: 50%;
 			}
 		}
-		@media (max-width: 400px){
+		@media (max-width: 400px) {
 			width: 260px;
 		}
 	}
@@ -45,12 +45,11 @@
 		margin-top: 1rem;
 		width: 5rem;
 		border: 1px solid green;
-		@media (max-width: 855px){
+		@media (max-width: 855px) {
 			margin-left: 1rem;
 			margin-right: 1rem;
 			width: 1px;
 		}
-
 	}
 	.card-content {
 		display: flex;
@@ -61,18 +60,15 @@
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
-			@media (max-width: 400px){
-			font-size: .75rem;
-		}
+			@media (max-width: 400px) {
+				font-size: 0.75rem;
+			}
 		}
 		p {
 			color: black;
-			@media (max-width: 400px){
-			font-size: .75rem;
-		}
+			@media (max-width: 400px) {
+				font-size: 0.75rem;
+			}
 		}
 	}
-
-
-	
 </style>

@@ -10,18 +10,23 @@ categories:
 coverImage: 'images/placeholder-2022-thumb.jpeg'
 excerpt: My favorite releases of 2022 (and the stuff I need to spend more time with).
 ---
+
 <script>
     import MusicList from "$lib/components/music-list.svelte"
 </script>
+
 (note: this is in the process of still being written but its here because i have no fear and merge directly into main. so none of this copy is really gonna stay. thanks)
+
 ## Year end lists are tough...
 
 There is never a shortage of music (or year end lists for that matter), but as time has gone on I have found that folks will post their definitive year end list earlier and earlier each year. I think the first one i saw was mid November in 2022! One thing that I have found solace in is that with my ever growing love for musical discovery there are so many releases added to the proverbial pile throughout the year. This year I found myself cataloguing my musical taste in a more programmatic and descriptive way.
 
 ### The great Spotify migration
 
-As I said before I started looking the way that I was catalouging my music tastes throughout the year and found that I was relying far too much on spotify to do that work for me with its Spotify Wrapped feature. This feature is great but what if I listened to music off the app? What if I listened to the radio, or a tape or a record or...you get it. 
+As I said before I started looking the way that I was catalouging my music tastes throughout the year and found that I was relying far too much on spotify to do that work for me with its Spotify Wrapped feature. This feature is great but what if I listened to music off the app? What if I listened to the radio, or a tape or a record or...you get it.
+
 ### 1. The Top Album - Artist
+
 <div class = "top-album">
 <img id= "top-album-art" src = "images/things-take-time.webp" />
 <p>
@@ -31,6 +36,7 @@ I feel like I had to pick a "best" album of the year so I choose this but if im 
 <MusicList />
 
 ### More tracks that I loved (that aren't on Spotify)
+
 - toro y moi - mahal
 - toro y moi - mahal
 - toro y moi - mahal
@@ -50,7 +56,8 @@ I feel like I had to pick a "best" album of the year so I choose this but if im 
 - toro y moi - mahal
 - toro y moi - mahal
 
-### More albums that I loved 
+### More albums that I loved
+
 - toro y moi - mahal
 - toro y moi - mahal
 - toro y moi - mahal

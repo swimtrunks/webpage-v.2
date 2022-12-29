@@ -17,7 +17,7 @@
 				<div class="project-description">
 					<h4>{client.title}</h4>
 					<p>{client.description}</p>
-					<a href = {client.link}> visit site </a>
+					<a href={client.link}> visit site </a>
 				</div>
 			</div>
 		{/each}
@@ -59,8 +59,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
-		@media (max-width:400px) {
-			width: 260px
+		@media (max-width: 400px) {
+			width: 260px;
 		}
 	}
 	.project-image {
@@ -71,7 +71,7 @@
 		background-color: transparent;
 		border-radius: unset;
 		box-shadow: unset;
-		
+
 		//
 		justify-content: center;
 		align-items: unset;
@@ -83,15 +83,15 @@
 			margin: 0;
 			color: grey;
 		}
-		div{
+		div {
 			background-color: rgba(239, 244, 240, 0.117);
 			padding: 1rem;
 			border-radius: 1rem;
 		}
 	}
-	.project-description{
-		@media (max-width:400px) {
-				font-size: .75rem;
-			}
+	.project-description {
+		@media (max-width: 400px) {
+			font-size: 0.75rem;
+		}
 	}
 </style>

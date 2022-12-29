@@ -1,5 +1,3 @@
-
-
 <script>
 	import '$lib/styles/global.scss';
 	import Header from '$lib/components/base/header.svelte';
@@ -8,9 +6,7 @@
 	$: ({ post } = data);
 </script>
 
-<svelte:head>
-
-</svelte:head>
+<svelte:head />
 
 <div class="markdown-layout">
 	<main>
@@ -18,7 +14,7 @@
 			<div class="header">
 				<h1>{post.title}</h1>
 			</div>
-			
+
 			<div class="content">
 				<slot />
 			</div>
@@ -27,7 +23,7 @@
 </div>
 
 <style>
-	.header{
+	.header {
 		text-align: center;
 		font-size: 1.5rem;
 	}

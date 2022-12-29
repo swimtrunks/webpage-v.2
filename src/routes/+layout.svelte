@@ -4,9 +4,8 @@
 </script>
 
 <Header />
-	<slot />
+<slot />
 <Footer />
 
 <style>
-
 </style>

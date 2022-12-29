@@ -9,7 +9,6 @@
 		Avatar by
 		<a href="http://www.shaferbrown.com/" rel="noreferrer" target="_blank">Shafer Brown</a>.
 	</h5>
-
 </footer>
 
 <style lang="scss">
