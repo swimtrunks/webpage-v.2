@@ -27,16 +27,29 @@
 		img{
 			max-width: 275px;
 		}
-		
 		@media (max-width: 855px){
-			height: 22rem;
-			width: 50%
+			flex-direction: row;
+			height: 10rem;
+			width: 100%;
+			max-width: 400px;
+			img{
+				width: 50%
+			}
+		}
+		@media (max-width: 400px){
+			width: 260px;
 		}
 	}
 	.card-divider {
 		margin-top: 1rem;
 		width: 5rem;
 		border: 1px solid green;
+		@media (max-width: 855px){
+			margin-left: 1rem;
+			margin-right: 1rem;
+			width: 1px;
+		}
+
 	}
 	.card-content {
 		display: flex;
@@ -50,6 +63,9 @@
 		}
 		p {
 			color: black;
+			@media (max-width: 400px){
+			font-size: .75rem;
+		}
 		}
 	}
 

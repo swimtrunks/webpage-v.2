@@ -4,6 +4,7 @@
 </script>
 
 <div class="blog-button">
+	<!-- TODO: Pass in props -->
 	<a href="/blog" alt=""> Read Everything</a>
 </div>
 
