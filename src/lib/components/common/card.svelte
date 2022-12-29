@@ -3,7 +3,7 @@
 </script>
 
 <a class="click-card" href="/{post.slug}">
-	<img src="/images/opti-placeholder-thumbnail.png" alt="" />
+	<img src={post.coverImage} alt={post.alt_text} />
 	<div class="card-divider" />
 	<div class="card-content">
 		<h4>{post.title}</h4>
@@ -26,6 +26,7 @@
 		//TODO: handle responsiveness here for tablet / mid sizes
 		img {
 			max-width: 275px;
+			height: 100%;
 		}
 		@media (max-width: 855px) {
 			flex-direction: row;
@@ -38,6 +39,11 @@
 		}
 		@media (max-width: 400px) {
 			width: 260px;
+		}
+		&:hover{
+			transition: 400ms;
+			box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+			background-color: rgb(249, 235, 216);
 		}
 	}
 	// TODO: implement divider component instead

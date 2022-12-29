@@ -5,10 +5,8 @@ date: '2021-1-1'
 categories:
   - 'sveltekit'
   - 'markdown'
-coverImage: ''
-coverWidth: 16
-coverHeight: 9
-excerpt: Bae... wake up, SvelteKit v.1 just dropped. Let's build.
+coverImage: 'images/svelte-thumb.webp'
+excerpt: Bae, wake up... SvelteKit v.1 just dropped. Let's build!
 ---
 
 ## So..

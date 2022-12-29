@@ -1,6 +1,6 @@
 {
-	"name": "webpage",
-	"version": "0.5.0",
+	"name": "malcolmpeterson.com",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

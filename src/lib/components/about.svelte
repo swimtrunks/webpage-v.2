@@ -17,7 +17,7 @@
 		</div>
 		<div id="about-me-text">
 			<div>
-				<h2>I am a software engineer with a focus on front-end and accessiblity</h2>
+				<h2>I'm a full stack software engineer with a focus on front-end and accessiblity</h2>
 				<!-- TODO: double check 'about me' copy  -->
 				<strong>Hi</strong>, I am a self-taught software engineer currently making cool stuff for
 				the web professionally over at

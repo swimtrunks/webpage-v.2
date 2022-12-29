@@ -5,13 +5,14 @@ export async function load({ params }) {
 	const result = Object.keys(filteredPosts)
 		.slice(0, 3)
 		.map((index) => {
-			const { slug, title, date, excerpt, tags } = filteredPosts[index];
+			const { slug, title, date, excerpt, tags, coverImage } = filteredPosts[index];
 			return {
 				slug,
 				title,
 				date,
 				excerpt,
-				tags
+				tags,
+				coverImage
 			};
 		});
 

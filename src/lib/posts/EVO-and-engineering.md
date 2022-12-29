@@ -6,7 +6,7 @@ categories:
   - 'engineering'
   - 'video games'
   - 'self-help'
-coverImage: ''
+coverImage: 'images/evo-thumb.webp'
 excerpt: Turns out that fighting games actually made me a better engineer.
 ---
 
