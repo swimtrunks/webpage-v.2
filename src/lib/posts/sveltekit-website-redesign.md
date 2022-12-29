@@ -1,7 +1,7 @@
 ---
 slug: 'sveltekit-website-redesign'
 title: 'Building a NEW site: featuring SvelteKit v.1'
-date: '2021-1-1'
+date: '2022-12-28'
 categories:
   - 'sveltekit'
   - 'markdown'

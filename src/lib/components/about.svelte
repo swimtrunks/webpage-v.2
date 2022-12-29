@@ -12,7 +12,7 @@
 	</div>
 	<section class="about-me-core">
 		<div class="image-wrapper">
-			<img src="images/me-and-lup.png" alt="" />
+			<img src="images/malcolm-portrait.webp" alt="" />
 			<Socials />
 		</div>
 		<div id="about-me-text">

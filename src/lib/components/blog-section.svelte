@@ -17,7 +17,7 @@
 <style lang="scss">
 	.recent-posts {
 		background-image: radial-gradient(circle at 1px 1px, green 1px, transparent 0);
-		background-size: 20px 30px;
+		background-size: 30px 40px;
 		margin-top: 1rem;
 		display: flex;
 		align-items: center;
