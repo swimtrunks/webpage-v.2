@@ -1,7 +1,6 @@
 <script>
 	// Declare the page variable to use on the client
 	export let data;
-	console.log(data.page.metadata);
 </script>
 
 <!-- Here we'll load the component of the blog post page itself -->

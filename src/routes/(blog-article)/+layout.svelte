@@ -1,7 +1,7 @@
 <script>
 	import '$lib/styles/global.scss';
 	export let data;
-	$: ({ post } = data);
+	let { post } = data;
 </script>
 
 <svelte:head />
@@ -9,7 +9,10 @@
 <div class="markdown-layout">
 	<main>
 		<article id="markdown-content">
-			<div class="header">
+			<div class = "image">
+				<img src = "{post.coverImage}" alt = "">
+			</div>
+			<div class="blog-header">
 				<h1>{post.title}</h1>
 			</div>
 
@@ -20,9 +23,14 @@
 	</main>
 </div>
 
-<style>
-	.header {
+<style lang="scss">
+	.blog-header {
 		text-align: center;
 		font-size: 1.5rem;
+	}
+	.image{
+		display:flex;
+		justify-content: center;
+		img{max-width: 600px;}
 	}
 </style>
