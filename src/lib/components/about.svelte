@@ -89,6 +89,7 @@ function stoppedPetting() {
 	#over-image{
 		position: absolute;
 		left:0;
+		top:0;
 		display: none;
 	}
 	.image-wrapper {
