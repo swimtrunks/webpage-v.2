@@ -9,8 +9,8 @@
 <div class="markdown-layout">
 	<main>
 		<article id="markdown-content">
-			<div class = "image">
-				<img src = "{post.coverImage}" alt = "">
+			<div class="image">
+				<img src={post.coverImage} alt="" />
 			</div>
 			<div class="blog-header">
 				<h1>{post.title}</h1>
@@ -28,9 +28,11 @@
 		text-align: center;
 		font-size: 1.5rem;
 	}
-	.image{
-		display:flex;
+	.image {
+		display: flex;
 		justify-content: center;
-		img{max-width: 600px;}
+		img {
+			max-width: 600px;
+		}
 	}
 </style>

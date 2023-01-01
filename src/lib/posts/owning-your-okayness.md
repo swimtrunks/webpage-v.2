@@ -5,8 +5,8 @@ date: '2021-10-26'
 updated: '2022-08-01'
 featured: true
 categories:
-  - 'sveltekit'
-  - 'markdown'
+  - 'self help'
+  - 'engineering'
 coverImage: 'images/placeholder-feat.webp'
 excerpt: Walk through this framework to hone your question asking skills.
 ---
