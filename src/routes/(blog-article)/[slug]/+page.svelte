@@ -1,16 +1,24 @@
 <script>
 	// Declare the page variable to use on the client
 	export let data;
+
 </script>
 
-<!-- Here we'll load the component of the blog post page itself -->
 <div class="overview">
+	
 	<div class="text">
+		<div class="image">
+			<img src={data.page.metadata.coverImage} alt="" />
+		</div>
+		<div class="blog-header">
+			<h1>{data.page.metadata.title} <span> | Published: {data.page.metadata.date} </span></h1>
+			
+		</div>
 		<svelte:component this={data.page.default} />
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.overview {
 		display: flex;
 		flex-direction: column;
@@ -21,5 +29,29 @@
 		border-radius: 1rem;
 		padding: 2rem;
 		max-width: 62rem;
+	}
+	.image {
+		display: flex;
+		justify-content: center;
+		img {
+			border-radius: 0px;
+			max-width: 1050px;
+		}
+	}
+	.blog-header{
+		h1{
+			font-size: 4rem;
+			text-transform: uppercase;
+			font-family: Bebas Neue;
+			@media (max-width:600px) {
+				font-size: 2rem;
+			}
+			span{
+				letter-spacing: 1px;
+				font-weight: 400;
+				font-size: 1rem;
+			}
+		}
+
 	}
 </style>
