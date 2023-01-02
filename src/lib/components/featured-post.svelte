@@ -7,13 +7,11 @@
 	<a href={post.slug} class="featured-card">
 		<img src={post.coverImage} alt={post.alt_text} />
 		<div>
-			<!-- <a href="/{post.slug}">{post.title} <br /> </a> -->
 			<h2>{post.title}</h2>
-			<br />
 			<p>
 				{post.excerpt}
 			</p>
-			written on: {post.date}
+			<span>published: {post.date}</span>
 		</div>
 	</a>
 </section>
@@ -39,6 +37,12 @@
 	h1 {
 		font-size: 1.75rem;
 	}
+	h2{
+		text-transform: uppercase;
+		font-family: Bebas Neue;
+		font-size: 4rem;
+		margin-bottom: 0;
+	}
 	section {
 		display: block;
 		border-radius: 1rem;
@@ -53,7 +57,12 @@
 			}
 		}
 		p {
-			font-size: 1rem;
+			margin-top: 8px;
+			color: black;
+			font-size: 2rem;
+		}
+		span{
+			color: rgb(32, 140, 32)
 		}
 	}
 </style>

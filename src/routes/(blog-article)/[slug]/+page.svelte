@@ -40,9 +40,9 @@
 	}
 	.blog-header{
 		h1{
-			font-size: 3rem;
+			font-size: 4rem;
 			text-transform: uppercase;
-			letter-spacing: -2px;
+			font-family: Bebas Neue;
 			@media (max-width:600px) {
 				font-size: 2rem;
 			}

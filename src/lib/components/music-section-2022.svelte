@@ -3,10 +3,10 @@
         <strong>note:</strong> if you just want to load up a playlist and forget it here you go:
     </p>
     <div>
-    <h2>congress//22: </h2>
-    <a href="https://open.spotify.com/playlist/0WHkhFWaYopmmeXO1mRrdc?si=94a85d39bc134686" alt="" rel="noreferrer" target="_blank">Spotify</a>
-    <a href="https://music.apple.com/us/playlist/congress-22/pl.u-JPAZEa3uDgog5l" alt="" rel="noreferrer" target="_blank">Apple Music</a>
-    <a href="https://youtube.com/playlist?list=PLbuRp1sRoiwaLfyPzeG0-ANwD9cYK5XbP" alt="" rel="noreferrer" target="_blank">YouTube</a>
+    <h3>congress//22: </h3>
+    <a href="https://open.spotify.com/playlist/0WHkhFWaYopmmeXO1mRrdc?si=94a85d39bc134686" alt="link to year end playlist on spotify" rel="noreferrer" target="_blank">Spotify</a>
+    <a href="https://music.apple.com/us/playlist/congress-22/pl.u-11zBBJBT8YdYmK" alt="link to year end playlist on apple music" rel="noreferrer" target="_blank">Apple Music</a>
+    <a href="https://www.youtube.com/playlist?list=PLbuRp1sRoiwZAHEAuAHgo4XMy5zV69m6C" alt="link to year end playlist on youtube" rel="noreferrer" target="_blank">YouTube</a>
     </div>
 </section>
 
@@ -106,48 +106,48 @@
         <a href="https://knxwledge.bandcamp.com/album/v1" rel="noreferrer" target="_blank">
         <img src="images/2022/music/knx-v1.webp" alt="" />
         <span class="album-name">V1</span> -     
-        <span class="album-artist">KNXWLEDGE</span>
+        <span class="artist-name">KNXWLEDGE</span>
         </a>
     </li>
     <li>
         <a href="https://shop.mutualintentions.com/album/ivan-ave-mid-season-ep" rel="noreferrer" target="_blank">
         <img src="images/2022/music/ivanave-midseasonep.webp" alt="" />
         <span class="album-name">Mid Season EP</span> - 
-        <span class="album-artist">Ivan Ave</span>
+        <span class="artist-name">Ivan Ave</span>
         </a>
     </li>
     <li>
         <a href="https://duvaltimothy.bandcamp.com/album/meeting-with-a-judas-tree" rel="noreferrer" target="_blank">
         <img src="images/2022/music/timothyduval-mwajt.webp" alt="" />
         <span class="album-name">Meeting With A Judas Tree</span> - 
-        <span class="album-artist">Duval Timothy</span>
+        <span class="artist-name">Duval Timothy</span>
         </a>
     </li>
     <li>
         <a href="https://tops.bandcamp.com/album/empty-seats" rel="noreferrer" target="_blank">
         <img src="images/2022/music/tops-emptyseats.webp" alt="" />
         <span class="album-name">Empty Seats</span> - 
-        <span class="album-artist"> TOPS</span>
+        <span class="artist-name"> TOPS</span>
         </a>
     </li>
     <li>
         <a href="https://hiroama.bandcamp.com/album/animal-emotions-ep" rel="noreferrer" target="_blank">
         <img src="images/2022/music/hiro-ama-aeep.webp" alt="" />
         <span class="album-name"> Animal Emotions EP</span> - 
-        <span class="album-artist">Hiro Ama</span>
+        <span class="artist-name">Hiro Ama</span>
         </a>
     </li>
     <li>
         <a href="https://touching-bass.bandcamp.com/album/touching-bass-presents-soon-come" rel="noreferrer" target="_blank">
         <img src="images/2022/music/touchingbass-sooncome.webp" alt="" />
         <span class="album-name">Soon Come</span> - 
-        <span class="album-artist">Touching Bass Presents:</span>
+        <span class="artist-name">Touching Bass Presents:</span>
         </a>
     </li>
     <li>
         <a href="https://ginajeanz.bandcamp.com/album/sounds-of-zanzi" rel="noreferrer" target="_blank">
         <img src="images/2022/music/ginajeanz-zanziep.webp" alt="" />
-        <span class="album-artist">Gina Jeanz</span> - 
+        <span class="artist-name">Gina Jeanz</span> - 
         <span class="album-name"> Sounds Of Zanzi</span>
         </a>
     </li>
@@ -155,7 +155,7 @@
         <a href="https://ar-contour.bandcamp.com/album/onwards" rel="noreferrer" target="_blank">
         <img src="images/2022/music/contour-onwards.webp" alt="" />
         <span class="album-name">Onwards</span>
-        <span class="album-artist">Contour</span>
+        <span class="artist-name">Contour</span>
         </a>
     </li>
     </ul>
@@ -627,6 +627,11 @@
     }
     .album-name, .song-name{
         font-weight: 700;
+        font-size: 1.25rem;
+    }
+    .artist-name{
+        font-weight: 400;
+        font-size: 1.25rem;
     }
 
     .other-selections{

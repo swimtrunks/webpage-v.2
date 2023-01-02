@@ -13,19 +13,19 @@ excerpt: Here's the stuff I had on repeat and some of the stuff that I still nee
 
 <script>
     import MusicSection2022 from '$lib/components/music-section-2022.svelte';
-
+    import Image from '$lib/components/common/image.svelte';
 </script>
 
 ## Is it me or are end of the year list starting to come out around the same time as Christmas decorations in department stores now?
 
-And what i mean by that is that they are coming out earlier and earlier. I still feel like I need to wait until the last minute in order to get a full scoop of what I listened to during the year. I honestly have so much more music to listen to from the past year (and the ones im most excited about are listed here as well) that I wouldn’t dare put out a definitive list before the end of the year (especially Black Stars new album “No fear of time” that is [currently being held hostage behind a paywall over at Luminary!?](https://www.engadget.com/after-24-years-black-star-is-back-but-only-on-the-luminary-podcasting-platform-212534798.html)).
+**And what i mean by that is that they are coming out earlier and earlier.** I still feel like I need to wait until the last minute in order to get a full scoop of what I listened to during the year. I honestly have so much more music to listen to from the past year (and those selections are listed here as well) that I wouldn’t dare put out a definitive list before the end of the year (especially Black Star's new album “No Fear of Time” that is [currently being held hostage behind a paywall over at Luminary!?](https://www.engadget.com/after-24-years-black-star-is-back-but-only-on-the-luminary-podcasting-platform-212534798.html)).
 
 In order to get an accurate read on what I was actually listening to I needed to stop leaning so hard on Spotify Wrapped, so this year I used lastfm.
-I always look at the Wrapped playlist and think “I KNOW I listened to WAY more than this”. I listen to my music on a mix of websites apps and [physical media](https://www.discogs.com/user/swim_trunks/collection). There are far too many sources to try to aggregate accurately on my own and thanks to lastfm I wouldn’t have to. So armed with this new data I can see exactly how I spent my time listening to music this year.
-
-[last fm stats](link)
+I always look at the Wrapped playlist and think **“I KNOW I listened to WAY more than this”**. I listen to my music on a mix of websites apps and [physical media](https://www.discogs.com/user/swim_trunks/collection). There are far too many sources to try to aggregate accurately on my own and thanks to lastfm I wouldn’t have to. [So armed with this new data I can see exactly how I spent my time listening to music this year](https://www.last.fm/user/hiMalcolm/listening-report/year).
+<Image text="A breakdown of the most common genres year by month" alttext="breakdown of the genres I listend to the most by month" image="images/2022/music/lastfm_genre.png" />
 
 **So with all that out of the way; here are some of my favorite music from 2022 (...and some that I still need to get to):**
+
 
 <MusicSection2022 />
 
