@@ -1,14 +1,18 @@
 ---
 slug: 'owning-your-okayness'
 title: 'Owning Your Okayness: The Art of Asking Questions'
-date: '2021-10-26'
-updated: '2022-08-01'
-featured: true
+date: '2021-08-03'
+updated: '2022-12-01'
+
 categories:
-  - 'sveltekit'
-  - 'markdown'
-coverImage: 'images/placeholder-feat.webp'
+  - 'self help'
+  - 'engineering'
+coverImage: 'images/simpsons.png'
 excerpt: Walk through this framework to hone your question asking skills.
+---
+
+*This article was orignally posted on [Postlight.com](https://postlight.com/insights/asking-questions-the-art-of-owning-your-okayness) on August 3,2022*
+
 ---
 
 Being new is scary, but especially in tech. I remember onboarding onto my first project, where I was tasked to assist in delivering a design system. I was already really nervous because I was surrounded by seasoned engineers, and I, on the other hand, was completely new and self-taught.

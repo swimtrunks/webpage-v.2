@@ -1,24 +1,24 @@
 <script>
 	import Socials from '$lib/components/socials.svelte';
 
-//just for goofs
-let startPets, endPets;
-function startedPetting() {
-  startPets = new Date();
-  console.log("Lupin approaches.")
-}
-function stoppedPetting() {
-  endPets = new Date();
-  var timeDiff = endPets - startPets; //in ms
-  timeDiff /= 1000;
-  var seconds = Math.round(timeDiff % 60);
-  if(seconds<=9){
-  	console.log(`You only pet Lupin for ${seconds} seconds... He walked away disappointed.`);
-  }else if(seconds>9){
-  	console.log(`WOW, you pet Lupin for ${seconds} seconds! He seems to be satisfied.`)
+	//just for goofs
+	let startPets, endPets;
+	function startedPetting() {
+		startPets = new Date();
+		console.log('Lupin approaches.');
 	}
-}
-//
+	function stoppedPetting() {
+		endPets = new Date();
+		var timeDiff = endPets - startPets; //in ms
+		timeDiff /= 1000;
+		var seconds = Math.round(timeDiff % 60);
+		if (seconds <= 9) {
+			console.log(`You only pet Lupin for ${seconds} seconds... He walked away disappointed.`);
+		} else if (seconds > 9) {
+			console.log(`WOW, you pet Lupin for ${seconds} seconds! He seems to be satisfied.`);
+		}
+	}
+	//
 </script>
 
 <div class="about-me">
@@ -31,13 +31,21 @@ function stoppedPetting() {
 	</div>
 	<section class="about-me-core">
 		<div>
-			<div class="image-wrapper" on:mouseenter={startedPetting} on:mouseleave={stoppedPetting} >
-				<img id="under-image" src="images/malcolm-portrait.webp" alt="a drawing of me alone with an assortment of my interest illustrated in the background" />
-				<img id="over-image" src="images/me-and-lup.png" alt="a drawing of me and my dog lupin with an assortment of my interest illustrated in the background">
+			<div class="image-wrapper" on:mouseenter={startedPetting} on:mouseleave={stoppedPetting}>
+				<img
+					id="under-image"
+					src="images/malcolm-portrait.webp"
+					alt="a drawing of me alone with an assortment of my interest illustrated in the background"
+				/>
+				<img
+					id="over-image"
+					src="images/me-and-lup.png"
+					alt="a drawing of me and my dog lupin with an assortment of my interest illustrated in the background"
+				/>
 			</div>
 			<Socials />
 		</div>
-		
+
 		<div id="about-me-text">
 			<div>
 				<h2>I'm a full stack software engineer with a focus on front-end and accessiblity</h2>
@@ -86,17 +94,17 @@ function stoppedPetting() {
 			align-items: center;
 		}
 	}
-	#over-image{
+	#over-image {
 		position: absolute;
-		left:0;
-		top:0;
+		left: 0;
+		top: 0;
 		display: none;
 	}
 	.image-wrapper {
 		position: relative;
-		&:hover{
+		&:hover {
 			cursor: grab;
-			#over-image{
+			#over-image {
 				display: unset;
 			}
 		}
@@ -130,7 +138,7 @@ function stoppedPetting() {
 		font-weight: bold;
 		&:hover {
 			transition: 300ms;
-			text-decoration:underline;
+			text-decoration: underline;
 			color: rgb(250, 0, 0);
 		}
 	}

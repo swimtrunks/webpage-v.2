@@ -1,9 +1,9 @@
 <script>
-	import Socials from '$lib/components/socials.svelte';
+	let year = new Date().getFullYear()
 </script>
 
 <footer>
-	<p>© 2022 Malcolm Peterson. Made <strong>NOWHERE.</strong></p>
+	<p>© {year} Malcolm Peterson. Made <strong>NOWHERE.</strong></p>
 	<h5>
 		Powered by <a href="https://kit.svelte.dev/" rel="noreferrer" target="_blank">SvelteKit</a>,
 		Avatar by
