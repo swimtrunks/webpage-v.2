@@ -1,10 +1,14 @@
 # my personal site: malcolmpeterson.com
 
+![webpage-mock](https://user-images.githubusercontent.com/25188844/212497095-1a3f67a6-33ba-424d-b31e-631cdb963da8.jpg)
+
 (this is a rough readme that will grow in time. I just wanted to get something in here as I work through cleaning up the code and documenting things for later)
 
 This is my own personal website, built with SvelteKit. It also holds my own personal blog.
 
-I wanted to build something with SvelteKit as it had just reached its v1 release. I had sometime off so I figured I would rebuild my personal site with it
+I wanted to build something with SvelteKit as
+
+it had just reached its v1 release. I had sometime off so I figured I would rebuild my personal site with it
 
 # What Else...
 
