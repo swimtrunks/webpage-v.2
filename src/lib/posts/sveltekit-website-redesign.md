@@ -17,11 +17,11 @@ So for as long as I have been programming I have always wanted to design and bui
 
 ## Svelte has entered the chat
 
-Earlier this year I worked on an internal project called [Textmoji](textmoji.app) that used Svelte and found the syntax and dev experience refreshing (hot reloading is great, state management, the way Svelte handles 2 way binding is actually kind of cool, Svelte stores vs useState react, no prop drilling, etc). While working on new features and code reviews one day I found out that its big brother, Sveltekit, had just hit its official 1.0 release so I was already primed and ready to jump in. But for others who weren’t drinking the koolaid that begs the question…what is Svelte kit and why would anyone use it?
+Earlier this year I worked on an internal project called [Textmoji](textmoji.app) that used Svelte and found the syntax and dev experience refreshing (hot reloading is great, state management, the way Svelte handles 2 way binding is actually kind of cool, Svelte stores vs useState react, no prop drilling, etc). While working on new features and code reviews one day I found out that its big brother, Sveltekit, had just hit its official 1.0 release so I was already primed and ready to jump in. But for others who weren’t drinking the koolaid that begs the question…what is SvelteKit and why would anyone use it?
 
 ## Why SvelteKit?
 
-So there is an article that the Svelte team wrote about what SvelteKit is and what it can do (link) but to summarize why I wanted to use it, it came down to a few things:
+So like everyone else in the dev community I take everything that is posted on Fireship's YouTube as gospel, [so when he made a video about SvelteKit](https://www.youtube.com/watch?v=uEJ-Rnm2yOE) I was convinced. Ultimately I wanted to use it due to a few main takeaways:
 
 1. I wanted something that was fast. Svelte is a compiler so its heavy lifting is done on build and not at runtime. It only loads what you need. We are aiming for greens across the board with page insights.
 2. Something that I would be simple to start to build with and deploy.
@@ -33,13 +33,13 @@ I had some time off work, and a few article with some tutorials on how to approa
 
 ## Humble beginnings
 
-I started by running the **create Svelte app** cli command in the terminal and the handy startup script guides you through that process pretty smoothly. The config was pretty easy as well. I just needed preprocess (npm command) and to add the lang attribute to my style tags like: **`<style lang=“scss”></style>`** to enable SCSS and MDservX for markdown files for the blog posts (more on that later).
+I started by running the **create Svelte app** cli command in the terminal and the handy startup script guides you through that process pretty smoothly. The config was pretty easy as well. I just needed preprocess and to add the lang attribute to my style tags like: **`<style lang=“scss”></style>`** to enable SCSS and [MDsveX](https://github.com/pngwn/MDsveX) for markdown files for the blog posts (more on that later).
 
-When attempting to design something myself, my approach is simple…start by throwing styling on the page and hope something sticks. After an hour trying (and failing) to solidify the front page layout, I ultimately decided to lean heavily on josh w (link) and matt fs (link) page as inspiration in the end I came up with this:
+When attempting to design something myself, my approach is simple…start by throwing styling on the page and hope something sticks. After an hour trying (and failing) to solidify the front page layout, I ultimately decided to lean heavily on both [Josh W Comeau's](https://www.joshwcomeau.com/) and [Matt Fantinel's](https://fantinel.dev/) pages as inspiration in the end I came up with this:
 
 ![first pass at front page design](images/sveltekit-redesign/screenshot.png)
 
-My objective for the sites purpose was simple: put my personality on display through design and blog posts as well as show off some work I had been a part of. I also wanted to go a different way when ti came to color palette. I usually just go barebones white background but I accidentally typed something and it vscode suggested ‘blanched almond’ so just used it as a placeholder color but it ultimately stuck. Last thing to do was drum up a quick logo design. Once the logo, layout and the color palette were finalized it was pretty smooth sailing for me design wise.
+My objective for the sites purpose was simple: put my personality on display through design and blog posts as well as show off some work I had been a part of. I also wanted to go a different way when ti came to color palette. I usually just go barebones white background but I accidentally typed something and it vscode suggested ‘blanchedalmond’ so just used it as a placeholder color but it ultimately stuck. Last thing to do was drum up a quick logo design. Once the logo, layout and the color palette were finalized it was pretty smooth sailing for me design wise.
 
 At this time I would like to also say I am NOT a designer but I tried hard to keep the website within good practice. I even asked some design friends in a discord and made some changes based off of the feedback (so basically feel free to roast it so I can make it better). So all that was left was to start working on the website logic and hook up the blog.
 
@@ -51,11 +51,11 @@ Passing down props is pretty simple as well as you declare them in the script el
 
 ## Markdown files… in SvelteKit?
 
-There was one problem I ran into while working through this and it was that markdown wasn’t natively supported and thats where MDserX comes in. With this you use md files but you can do things like leverage custom components within them as well. So for instance, I am working an a post and I want to have a info-block component. I can just make that component like I normally would and then import it just like I would anywhere else in the application. Also I wanted to make a "Featured" blog post appear at the top of the blog's front page, so in order to do this I just simply added a metadata tag that has the value of a boolean and if it is true (in this case I just named it "Featured") then it will render it with the custom featured-post component I made. 
+There was one problem I ran into while working through this and it was that markdown wasn’t natively supported and thats where MDsveX comes in. With this you use md files but you can do things like leverage custom components within them as well. So for instance, I am working an a post and I want to have a info-block component. I can just make that component like I normally would and then import it just like I would anywhere else in the application. Also I wanted to make a "Featured" blog post appear at the top of the blog's front page, so in order to do this I just simply added a metadata tag that has the value of a boolean and if it is true (in this case I just named it "Featured") then it will render it with the custom featured-post component I made. 
 
 ## Back End stuff
 
-One cool thing about Sveltekit is it also lets you build an API of sorts that leverages your route endpoints (that you add directly into the route folder). I thought this would be pretty cool as well because in the future I may want to use a tagging system and being able to display all posts related to specific tag would be helpful as the blog grows. In the interim I leaned heavily on the tutorial at matt f(link) to handle a custom url route purely for cosmetic reasons.
+One cool thing about Sveltekit is it also lets you build an API of sorts that leverages your route endpoints (that you add directly into the route folder). I thought this would be pretty cool as well because in the future I may want to use a tagging system and being able to display all posts related to specific tag would be helpful as the blog grows. In the interim I leaned heavily on this tutorial, also over at [Matt Fantinel's webpage](https://fantinel.dev/blog-development-sveltekit/) to handle a custom url route purely for cosmetic reasons.
 
 ## Wrapping Up
 
@@ -69,8 +69,8 @@ I also snuck in a cheek little easter egg where you can pet dog.First I just hav
 
 ## Next up:
 
-I am planning on cleaning up the code, and making a branch strictly for those who just want a template for a Sveltekit app complete with comments and a good readme to provide guidance and insight. I have already started working on the documentation and hopefully that will be up sooner rather than later. In the meantime feel free to open up pull requests on this post or the page in itself if you see something that needs correcting (fully open to criticism), or maybe you want to just use my page as a starting off point now rather than later? This is all free to use, go crazy!
+I am planning on cleaning up the code, and making a branch strictly for those who just want a template for a SvelteKit app complete with comments and a good readme to provide guidance and insight. I have already started working on the documentation and hopefully that will be up sooner rather than later. In the meantime feel free to open up pull requests on this post or the page in itself if you see something that needs correcting (fully open to criticism), or maybe you want to just use my page as a starting off point now rather than later? This is all free to use, go crazy!
 
 ## Would I do it all again?
 
-Yea! I think Svelte / Sveltekit is pretty smooth and ultimately it was the most fun I have had while working on a personal project in awhile. I would suggest anyone who is curious about it to give it a chance.
+Yea! I think Svelte / SvelteKit is pretty smooth and ultimately it was the most fun I have had while working on a personal project in awhile. I would suggest anyone who is curious about it to give it a chance.
