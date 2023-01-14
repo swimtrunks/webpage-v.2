@@ -59,11 +59,11 @@ One cool thing about Sveltekit is it also lets you build an API of sorts that le
 
 ## Wrapping Up
 
-Ok so I was a little impatient with the time constraints (I heavily neglected my wife and dog throughout this process so im owing them some quality time for sure) and because of this the code (mostly styling) could use some cleaning, and I plan on ripping out any of the javascript that I was using in order to mock up components to style BUT I am pretty proud of the outcome. Not bad for a 2 1/2 days work.
+Ok so I was a little impatient with the time constraints (I heavily neglected my wife and dog throughout this process so im owing them some quality time for sure) and because of this the code (mostly styling) could use some cleaning, and I plan on ripping out any of the JavaScript that I was using in order to mock up components to style BUT I am pretty proud of the outcome. Not bad for a 2 1/2 days work.
 
 ### [But can you pet the dog?!](https://twitter.com/CanYouPetTheDog?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
 
-I also snuck in a cheek little easter egg where you can pet dog.First I just have a hover style that changes the opacity of one image so that you can see the other and also there are a set of functions that calculates how long you “pet” Lupin for. It introduces client side javascript but I think it’s worth it in the end.
+I also snuck in a cheek little easter egg where you can pet dog.First I just have a hover style that changes the opacity of one image so that you can see the other and also there are a set of functions that calculates how long you “pet” Lupin for. It introduces client side JavaScript but I think it’s worth it in the end.
 
 ![easter egg demo](images/sveltekit-redesign/easter-egg.gif)
 
