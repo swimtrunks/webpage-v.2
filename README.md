@@ -6,9 +6,7 @@
 
 This is my own personal website, built with SvelteKit. It also holds my own personal blog.
 
-I wanted to build something with SvelteKit as
-
-it had just reached its v1 release. I had sometime off so I figured I would rebuild my personal site with it
+I wanted to build something with SvelteKit as it had just reached its v1 release. I had sometime off so I figured I would rebuild my personal site with it. (i also wrote about this a little bit on the site itself: https://malcolmpeterson.com/sveltekit-website-redesign)
 
 # What Else...
 
