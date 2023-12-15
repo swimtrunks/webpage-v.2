@@ -1,11 +1,11 @@
 <script>
-	// export let text;
-	// export let link;
+	export let text;
+	export let link;
 </script>
 
 <div class="blog-button">
 	<!-- TODO: Pass in props -->
-	<a href="/blog" alt=""> Read Everything</a>
+	<a href={link} alt=""> {text}</a>
 </div>
 
 <style lang="scss">

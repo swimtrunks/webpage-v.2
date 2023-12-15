@@ -14,39 +14,38 @@
 <style lang="scss">
 	.click-card {
 		padding: 1rem;
-		background-color: white;
+		background-color: transparent;
 		text-decoration: none;
-		border-radius: 0.5rem;
-		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07),
-			0px 1px 10px rgba(0, 0, 0, 0.06);
+		// border-radius: 0.5rem;
+		// box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07),
+		// 	0px 1px 10px rgba(0, 0, 0, 0.06);
 		display: flex;
 		flex-direction: column;
-		width: 20%;
+		width: 50%;
 		height: 20rem;
 		//TODO: handle responsiveness here for tablet / mid sizes
 		img {
-			max-width: 275px;
-			max-height: 150px;
-			height: 100%;
-		}
-		@media (max-width: 855px) {
-			flex-direction: row;
-			height: 10rem;
+			height: 150px;
 			width: 100%;
-			max-width: 400px;
-			img {
-				width: 50%;
-			}
 		}
+		// @media (max-width: 855px) {
+		// 	flex-direction: row;
+		// 	height: 10rem;
+		// 	width: 100%;
+		// 	max-width: 400px;
+		// 	img {
+		// 		width: 50%;
+		// 	}
+		// }
 		@media (max-width: 400px) {
 			width: 260px;
 		}
-		&:hover {
-			transition: 400ms;
-			box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
-				0px 9px 46px 8px rgba(0, 0, 0, 0.06);
-			background-color: rgb(249, 235, 216);
-		}
+		// &:hover {
+		// 	transition: 400ms;
+		// 	box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
+		// 		0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+		// 	background-color: rgb(159, 228, 161);
+		// }
 	}
 	// TODO: implement divider component instead
 	.card-divider {

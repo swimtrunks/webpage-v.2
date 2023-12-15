@@ -1,14 +1,14 @@
 <header>
 	<div class="shape-container">
-		<div class="shape" />
-		<div class="shape-2" />
+		<!-- <div class="shape" />
+		<div class="shape-2" /> -->
 	</div>
 	<nav>
 		<img class="logo" src="images/logo/opti-logo.png" alt="logo" />
 		<div class="nav-links">
 			<a href="/">home</a>
 			<a href="/blog">blog</a>
-			<a href="/resume.docx" download>resume</a>
+			<a href="/resume.pdf" download>resume</a>
 		</div>
 	</nav>
 </header>
@@ -18,6 +18,8 @@
 		padding-top: 2.5rem;
 		padding-bottom: 1rem;
 		background-color: transparent;
+		margin: 0 auto;
+		max-width: 1000px;
 	}
 	nav {
 		display: flex;
@@ -27,13 +29,13 @@
 		position: relative;
 		a {
 			display: block;
-			font-size: 2rem;
-			color: green;
-			font-family: Lexend Deca;
-			text-decoration: none;
+			font-size: 1.5rem;
+			color: black;
+			font-weight: bold;
+
 			&:hover {
-				transition: 800ms;
-				color: rgb(8, 69, 8);
+				transition: 500ms;
+				color: rgb(36, 112, 36);
 			}
 		}
 		img {
@@ -42,8 +44,8 @@
 		}
 	}
 	.nav-links {
-		display: inline-block;
-		text-align: right;
+		display: flex;
+		gap: 1rem;
 	}
 	.logo {
 		width: 150px;

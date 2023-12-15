@@ -1,5 +1,7 @@
 <script>
+	import { fly } from 'svelte/transition';
 	import Socials from '$lib/components/socials.svelte';
+	import Tooltip from '$lib/components/common/tooltip.svelte';
 
 	//just for goofs
 	let startPets, endPets;
@@ -18,17 +20,31 @@
 			console.log(`WOW, you pet Lupin for ${seconds} seconds! He seems to be satisfied.`);
 		}
 	}
-	//
+	let lupinInfo = {
+		name: 'lupin',
+		subname: 'lu&#x2022;pin',
+		image: 'images/lupin.png',
+		id: 'lupin-tooltip',
+		content: `
+		<span class="sub-name">lu&#x2022;pin</span>\ˈlü-pən\
+		<span class="classification-text">noun</span>
+		<span class="definition-number">(a.) 1.</span> is a dog (has been confused for an old man,
+		someones supervisor and possibly a loaf of bread)
+		<span class="definition-number">2.</span> finder of soft cushions, blankets and other places
+		to sleep
+		<span class="definition-number">3.</span> scavenger of food and other items that "may" be
+		edible
+		<strong>(b)</strong><strong class="classification-text">Core Proficiencies:</strong>Sleeping
+		&#x2022; &#x2022; Snoring &#x2022; Eating &#x2022;
+		<strong>(c)</strong><strong class="classification-text">Discovery:</strong> Randomly appeared
+		from the abyss one afternoon and attempted to assimlate into home life. Has been reported to
+		have powers of manipulation and control over humans in order to make them drop food on
+		command. <strong>[**citation needed]</strong>
+		`
+	};
 </script>
 
 <div class="about-me">
-	<div>
-		<h1>Hey, I'm Malcolm.</h1>
-		<p id="about-me-subtitle">
-			I <span class="edit-text">break</span> build things for the web then make
-			<span class="edit-text">fun of</span> content about it
-		</p>
-	</div>
 	<section class="about-me-core">
 		<div>
 			<div class="image-wrapper" on:mouseenter={startedPetting} on:mouseleave={stoppedPetting}>
@@ -47,53 +63,54 @@
 		</div>
 
 		<div id="about-me-text">
-			<div>
-				<h2>I'm a full stack software engineer with a focus on front-end and accessiblity</h2>
-				<!-- TODO: double check 'about me' copy  -->
-				<strong>Hi</strong>, I am a self-taught software engineer currently making cool stuff for
-				the web professionally over at
-				<a id="postlight" href="https://postlight.com" rel="noreferrer" target="_blank">Postlight</a
-				>. (<strong>sidenote: </strong>I built this website with
-				<a href="https://svelte.dev/blog/announcing-sveltekit-1.0" rel="noreferrer" target="_blank"
-					>SvelteKit v.1!
-				</a>You can check out the code
-				<a href="https://github.com/swimtrunks/webpage-v.2" rel="noreferrer" target="_blank">here</a
-				>
-				or read about the process of making it <a href="/sveltekit-website-redesign">here</a>).
-				<br /> <br />
-				When not at work I am typically hanging with my wife and dog, listening to new music as well
-				as obsessing over how I better
-				<a href="https://www.last.fm/user/hiMalcolm" rel="noreferrer" target="_blank"
-					>document my listening habits</a
-				>.
-				<br /> <br />
-				I enjoy creating content, having long discussions about video game journalism/history, diversity
-				and inclusion, accessiblity, architecture and music (so feel free to ask me anything about these).
-				<br /><br />
-				<strong>Core Proficiencies:</strong> <br />
-				&#x2022;HTML &#x2022;CSS[SASS,LESS] &#x2022;JavaScript[React, Next, Svelte & Sveltekit] &#x2022;Python
-				&#x2022;Node &#x2022;GraphQL &#x2022; REST APIs
-				<br /><br />
-				<strong>Other:</strong> &#x2022;Figma &#x2022;Git &#x2022;LaunchDarkly &#x2022;Mixpanel
-			</div>
+			<span id="name">mal&#x2022;colm pe&#x2022;ter&#x2022;son </span> \ˈmælkəm ˈpitərsənn\
+			<span class="classification-text">noun-very proper.</span>
+			<span class="definition-number">(a.) 1.</span>software engineer at
+			<a id="company" href="https://launch.nttdata.com/" rel="noreferrer" target="_blank"
+				>Launch by NTT Data</a
+			> <span class="definition-number">2.</span> advocate: accessiblity and diversity / inclusion
+			<span class="definition-number">3.</span>. person : husband,father,roomate to one dog
+			<span class="classification-text">
+				[see: 
+					<Tooltip info={lupinInfo} />
+				]
+			</span>, a general well wisher
+			<span class="definition-number">4.</span> video game enclyclopedia and collector
+			<span class="definition-number">5.</span>
+			obsessive over documenation of music listening habits
+			<!--tech section -->
+			<strong>(b)</strong><strong class="classification-text">Core Proficiencies:</strong>
+			&#x2022;HTML &#x2022;CSS[SASS, LESS, tailwind, bootstrap] &#x2022;JavaScript[React, Next, Svelte
+			& Sveltekit] &#x2022;Python &#x2022;Node &#x2022;GraphQL &#x2022; REST APIs
+			<strong>(c)</strong><strong class="classification-text">Other:</strong> &#x2022;Figma &#x2022;Git
+			&#x2022;LaunchDarkly &#x2022;Mixpanel
 		</div>
 	</section>
 </div>
 
 <style lang="scss">
+	#name {
+		font-family: Bitter;
+		font-size: 2rem;
+		font-weight: bold;
+	}
 	.about-me {
 		display: flex;
 		flex-direction: column;
-		background-image: radial-gradient(circle at 1px 1px, rgb(210, 193, 168) 1px, transparent 0);
+		width: 1000px;
+		// background-image: radial-gradient(circle at 1px 1px, rgb(210, 193, 168) 1px, transparent 0);
 		background-size: 30px 30px;
 	}
 	.about-me-core {
+		align-items: center;
 		display: flex;
+		gap: 4rem;
 		@media (max-width: 855px) {
 			flex-direction: column;
 			align-items: center;
 		}
 	}
+
 	#over-image {
 		position: absolute;
 		left: 0;
@@ -101,20 +118,27 @@
 		display: none;
 	}
 	.image-wrapper {
+		height: 400px;
 		position: relative;
+		display: flex;
+		justify-content: center;
 		&:hover {
 			cursor: grab;
 			#over-image {
 				display: unset;
 			}
 		}
-		max-width: 484px;
+
+		flex: 50%;
 	}
+
 	h1 {
 		margin-bottom: 0;
 	}
 	#about-me-text {
-		width: 50%;
+		margin-left: 1rem;
+		text-indent: -1rem;
+		flex: 50%;
 		@media (max-width: 600px) {
 			width: 75%;
 		}
@@ -126,20 +150,21 @@
 		color: rgb(152, 56, 11);
 		text-decoration: line-through;
 	}
+
+
 	a {
 		color: green;
 		&:hover {
 			color: rgb(1, 55, 1);
 		}
 	}
-	#postlight {
+	#company {
 		text-decoration: none;
-		color: rgb(157, 14, 14);
 		font-weight: bold;
 		&:hover {
 			transition: 300ms;
 			text-decoration: underline;
-			color: rgb(250, 0, 0);
+			color: rgb(47 53 218);
 		}
 	}
 </style>

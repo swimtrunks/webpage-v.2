@@ -3,7 +3,7 @@ import filteredPosts from '$lib/posts';
 
 export async function load({ params }) {
 	const result = Object.keys(filteredPosts)
-		.slice(0, 3)
+		.slice(0, 2)
 		.map((index) => {
 			const { slug, title, date, excerpt, tags, coverImage } = filteredPosts[index];
 			return {
