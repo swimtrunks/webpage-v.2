@@ -91,7 +91,6 @@
 			</div>
 			`,
 			phonetic_name: `\\ˈtɛkstˈmoʊʤi\\ - noun`
-
 		},
 		{
 			id: '6',
@@ -105,7 +104,6 @@
 			</div>
 			`,
 			phonetic_name: `ˈmælkəmˈpitərsən.kɑm`
-
 		},
 		{
 			id: '7',
@@ -124,7 +122,7 @@
 
 	let playdateInfo = {
 		name: 'playdate',
-		subname:`pleɪdeɪt`,
+		subname: `pleɪdeɪt`,
 		image: 'images/playdate.png',
 		flattenImage: true,
 		content: `
@@ -141,49 +139,46 @@
 		{#each projects as project}
 			<div>
 				<span class="definition-number">0{project.id}</span>
-				<a
-					href="#/"
-					on:click={() => (selectedProject = project.id)}
-					
-				>
+				<a href="#/" on:click={() => (selectedProject = project.id)}
+					class = {project.id === selectedProject ? "active-project" : ""}>
 					<strong>{project.name}</strong>
 				</a>
-			
+
 				<br />
-				
 			</div>
 		{/each}
 	</section>
 	<div class="project-card">
-		<div id = "project-heading" class = "section-heading">
-			work
-		</div>
+		<div id="project-heading" class="section-heading">work</div>
 		{#if selectedProject !== ''}
 			<div>
-			{#each projects as project}
-				{#if project.id === selectedProject}
-				<div class="project active" transition:fly={{ x: 1000, duration: 2000 }}>
-					<div class="project-image-section">
-						<img class="project-brand" src={project.projectBrand} alt="" />
-						<img class="project-screenshot" src={project.screenshot} alt="" />
-					</div>
-					<div>
-						<div class="project-name">
-							{project.dict_name}
-						    <span class = "project-phonetic"> 
-								{project.phonetic_name}.
-							</span>
+				{#each projects as project}
+					{#if project.id === selectedProject}
+						<div class="project active" transition:fly={{ x: 1000, duration: 1000 }}>
+							<div class="project-image-section">
+								<img class="project-brand" src={project.projectBrand} alt="" />
+								<img class="project-screenshot" src={project.screenshot} alt="" />
+							</div>
+							<div>
+								<div class="project-name">
+									{project.dict_name}
+									<span class="project-phonetic">
+										{project.phonetic_name}.
+									</span>
+								</div>
+								<div class="project-text">
+									{#if project.id === '7'}
+										Earlier this year I needed an excuse to buy a <Tooltip info={playdateInfo} />,
+										so I decided I would use it to learn game development.I have explored the C and
+										Lua API's and still haven't made much progress on it but I am keeping tabs on my
+										thoughts here and I'm excited to see where it goes.
+									{/if}
+									{@html project.content}
+								</div>
+							</div>
 						</div>
-						<div class="project-text">
-							{#if project.id === '7'}
-							Earlier this year I needed an excuse to buy a <Tooltip info={playdateInfo} />, so I decided I would use it to learn game development.I have explored the C and Lua API's and still haven't made much progress on it but I am keeping tabs on my thoughts here and I'm excited to see where it goes.
-							{/if}
-							{@html project.content} 
-						</div>
-					</div>
-				</div>
-				{/if}
-			{/each}
+					{/if}
+				{/each}
 			</div>
 		{:else}
 			<!-- Default content when no option is selected -->
@@ -195,11 +190,11 @@
 </section>
 
 <style lang="scss">
-  #work-section {
+	#work-section {
 		display: flex;
 		width: 1350px;
 		margin-top: 3rem;
-		margin-bottom:10rem;
+		margin-bottom: 10rem;
 		flex-direction: row;
 		gap: 1rem;
 	}
@@ -213,12 +208,25 @@
 		border: 1px solid rgba(8, 93, 8, 0.294);
 		padding: 10px;
 		font-family: Lexend Deca;
-		font-size: 1.5rem;
+		font-size: var(--font-size-m);
 	}
 	#projects {
 		margin-bottom: 25px;
 		flex-direction: column;
 		display: flex;
+		a {
+			transition: 0.3s;
+			color: black;
+			&:hover{
+				animation-name: highlight;
+				animation-duration: 0.75s;
+				animation-fill-mode: forwards;
+				background-size: 200%;
+				background-image: linear-gradient(to right, blanchedalmond 50%, transparent 50%),
+					linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
+				transition: 0.4s;
+			}
+		}
 	}
 	#project-heading {
 		margin-top: -2.5rem;
@@ -229,9 +237,9 @@
 		flex-direction: column;
 		border-radius: 10px;
 		width: 1120px;
-    	padding-right: 40px;
-		h2{
-			margin-top:0;
+		padding-right: 40px;
+		h2 {
+			margin-top: 0;
 		}
 		.project-phonetic {
 			font-size: 1rem;
@@ -263,38 +271,41 @@
 		width: 670px;
 	}
 	.project-image-section {
-		position: relative;	
+		position: relative;
 		left: 75%;
 	}
 
-  #projects {
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-  }
+	#projects {
+		margin-bottom: 25px;
+		display: flex;
+		flex-direction: column;
+	}
 
-  .project-card {
-    position: relative;
-    border-radius: 10px;
-    width: 1120px;
-    padding-right: 40px;
-  }
+	.project-card {
+		position: relative;
+		border-radius: 10px;
+		width: 1120px;
+		padding-right: 40px;
+	}
 
-  .project {
-	background-color: white;
-    position: absolute;
-	padding: 2rem;
-	border-radius: 1rem;
-	border: 1px solid rgba(8, 93, 8, 0.294);
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s;
-  }
+	.project {
+		background-color: white;
+		position: absolute;
+		padding: 2rem;
+		border-radius: 1rem;
+		border: 1px solid rgba(8, 93, 8, 0.294);
+		top: 0;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.5s;
+	}
 
-  .project.active {
-    opacity: 1;
-    pointer-events: all;
-  }
+	.project.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+	.active-project {
+		background-image: linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
+	}
 </style>

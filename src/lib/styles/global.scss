@@ -1,28 +1,46 @@
-// TODO : Add variables
-
-// css-variables:
-
-//     --spacing
-//     (s) : .5rem;
-//     (m) : 1rem;
-//     (l) : 2rem;
-
-//     --elevation
-//     box-shadow--high: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
-//     box-shadow--mid: 0px 6px 8px -5px rgba(0, 0, 0, 0.1), 0px 8px 20px 2px rgba(0, 0, 0, 0.07), 0px 3px 15px 5px rgba(0, 0, 0, 0.06);
-//     box-shadow--low: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07), 0px 1px 10px rgba(0, 0, 0, 0.06);
-//
-//	   --mixin - text clamp -
-//     display: -webkit-box;
-//     -webkit-line-clamp: 1;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;400;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display&family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+:root {
+	//spacing
+	--spacing-s: .5rem;
+	--spacing-m: 1.5rem;
+	--spacing-l: 2rem;
+	--spacing-xl: 4rem;
+	//breakpoints
+	--breakpoint-sm: 576px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 992px;
+	--breakpoint-xl: 1200px;
+	//font
+	--font-primary: 'Bitter', serif;
+	--font-secondary: 'DM Serif Display', serif;
+	--font-size-s: 1rem;
+	--font-size-m: 1.5rem;
+	--font-size-l: 2.5rem;
+	--font-size-xl: 4rem;
+	--letter-spacing-s: -0.5px;
+	--letter-spacing-m: -1px;
+	//icons
+	--icon-size-s: 1rem;
+	--icon-size-m: 1.5rem;
+	--icon-size-l: 2rem;
+	--icon-size-xl: 4rem;
+	--icon-size-xxl: 5.5rem;
+	//box-shadow
+	--elevation-box-shadow-high: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07), 0px 9px 46px 8px rgba(0, 0, 0, 0.06);
+	--elevation-box-shadow-mid: 0px 6px 8px -5px rgba(0, 0, 0, 0.1), 0px 8px 20px 2px rgba(0, 0, 0, 0.07), 0px 3px 15px 5px rgba(0, 0, 0, 0.06);
+	--elevation-box-shadow-low: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07), 0px 1px 10px rgba(0, 0, 0, 0.06);
+	//colors
+	--primary-beige: blanchedalmond;
+	--primary-green: green;
+	--secondary-green:rgb(159, 228, 161);
+	--primary-white: white;
+	--primary-black: black;
+}
 
 h1,
 h2,
@@ -109,3 +127,14 @@ a {
 .fullWidth {
 	width: 100%;
 }
+
+@keyframes highlight {
+    from {
+      background-position: 0;
+    }
+
+    to {
+      background-position: -100%;
+    }
+}
+

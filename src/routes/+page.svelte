@@ -16,7 +16,6 @@
 		"I'm a husband, father, and dog owner",
 		"I'm a video game encyclopedia and collector"
 	];
-
 </script>
 
 <div class="homepage">
@@ -26,7 +25,7 @@
 		dividerText={'now playing:"wow that was fast" by lil nas x, || most played genre this week: "pop" || total scrobbles this month: "1000"'}
 	/>
 	<ProjectSection />
-	<BlogSection posts={posts} />
+	<BlogSection {posts} />
 </div>
 <div class="paperOverlay" />
 
@@ -40,5 +39,4 @@
 			align-items: unset;
 		}
 	}
-
 </style>

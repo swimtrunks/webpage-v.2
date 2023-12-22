@@ -1,15 +1,17 @@
 <script>
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import Socials from '$lib/components/socials.svelte';
 	import Tooltip from '$lib/components/common/tooltip.svelte';
 
 	//just for goofs
-	let startPets, endPets;
+	let startPets, endPets, callLupin;
 	function startedPetting() {
+		callLupin = true;
 		startPets = new Date();
 		console.log('Lupin approaches.');
 	}
 	function stoppedPetting() {
+		callLupin = false;
 		endPets = new Date();
 		var timeDiff = endPets - startPets; //in ms
 		timeDiff /= 1000;
@@ -46,18 +48,21 @@
 
 <div class="about-me">
 	<section class="about-me-core">
-		<div>
+		<div class="first-section">
 			<div class="image-wrapper" on:mouseenter={startedPetting} on:mouseleave={stoppedPetting}>
 				<img
 					id="under-image"
 					src="images/malcolm-portrait.webp"
 					alt="a drawing of me alone with an assortment of my interest illustrated in the background"
 				/>
-				<img
-					id="over-image"
-					src="images/me-and-lup.png"
-					alt="a drawing of me and my dog lupin with an assortment of my interest illustrated in the background"
-				/>
+				{#if callLupin}
+					<img
+						transition:fade={{ delay: 50, duration: 200 }}
+						id="over-image"
+						src="images/me-and-lup.png"
+						alt="a drawing of me and my dog lupin with an assortment of my interest illustrated in the background"
+					/>
+				{/if}
 			</div>
 			<Socials />
 		</div>
@@ -71,8 +76,8 @@
 			> <span class="definition-number">2.</span> advocate: accessiblity and diversity / inclusion
 			<span class="definition-number">3.</span>. person : husband,father,roomate to one dog
 			<span class="classification-text">
-				[see: 
-					<Tooltip info={lupinInfo} />
+				[see:
+				<Tooltip info={lupinInfo} />
 				]
 			</span>, a general well wisher
 			<span class="definition-number">4.</span> video game enclyclopedia and collector
@@ -97,25 +102,33 @@
 	.about-me {
 		display: flex;
 		flex-direction: column;
-		width: 1000px;
-		// background-image: radial-gradient(circle at 1px 1px, rgb(210, 193, 168) 1px, transparent 0);
+		max-width: 1000px;
 		background-size: 30px 30px;
+	}
+	.first-section {
+		display: flex;
+		flex-direction: row-reverse;
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.about-me-core {
 		align-items: center;
 		display: flex;
-		gap: 4rem;
+		gap: var(--spacing-xl);
 		@media (max-width: 855px) {
 			flex-direction: column;
 			align-items: center;
+			gap: var(--spacing-m);
 		}
 	}
 
 	#over-image {
+		box-shadow: none;
 		position: absolute;
 		left: 0;
 		top: 0;
-		display: none;
 	}
 	.image-wrapper {
 		height: 400px;
@@ -128,7 +141,10 @@
 				display: unset;
 			}
 		}
-
+		@media (max-width: 855px) {
+			height: 250px;
+			width: 400px;
+		}
 		flex: 50%;
 	}
 
@@ -139,8 +155,9 @@
 		margin-left: 1rem;
 		text-indent: -1rem;
 		flex: 50%;
-		@media (max-width: 600px) {
-			width: 75%;
+		@media (max-width: 855px) {
+			width: 400px;
+			text-align: justify;
 		}
 	}
 	#about-me-subtitle {
@@ -150,7 +167,6 @@
 		color: rgb(152, 56, 11);
 		text-decoration: line-through;
 	}
-
 
 	a {
 		color: green;

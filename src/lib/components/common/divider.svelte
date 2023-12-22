@@ -1,5 +1,4 @@
 <script>
-
 	export let dividerText, fullWidth;
 	let getRandomMessage = () => {
 		const messages = [
@@ -31,6 +30,19 @@
 		display: flex;
 		padding: 4rem 5rem 4rem 5rem;
 		align-items: center;
+	}
+	.scroll-container::before {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		content: '';
+		/* you can control opacity of noise  */
+		opacity: 0.1;
+		z-index: 1000;
+		pointer-events: none;
+		background: (url('images/actualstatic.gif'));
 	}
 
 	.divider-border {

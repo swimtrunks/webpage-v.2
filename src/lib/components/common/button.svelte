@@ -15,16 +15,23 @@
 		background-color: green;
 		text-decoration: none;
 		border-radius: 0.75rem;
+		transition: all 0.3s ease-in-out;
 		box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07),
 			0px 1px 10px rgba(0, 0, 0, 0.06);
 		color: white;
 		cursor: pointer;
 	}
 	.blog-button {
+		display: inline-block;
 		will-change: contents;
+		margin-left: 1rem;
 		transition: all 0.3s ease-in-out;
 	}
 	.blog-button:hover {
-		transform: scale(1.05);
+		transform: scale(1.02);
+		a {
+			color: green;
+			background-color: white;
+		}
 	}
 </style>

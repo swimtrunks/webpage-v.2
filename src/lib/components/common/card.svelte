@@ -6,7 +6,7 @@
 	<img src={post.coverImage} alt={post.alt_text} />
 	<div class="card-divider" />
 	<div class="card-content">
-		<h4>{post.title}</h4>
+		<span class="card-title">{post.title}</span>
 		<p>{post.excerpt}</p>
 	</div>
 </a>
@@ -22,7 +22,7 @@
 		display: flex;
 		flex-direction: column;
 		width: 50%;
-		height: 20rem;
+		// height: 20rem;
 		//TODO: handle responsiveness here for tablet / mid sizes
 		img {
 			height: 150px;
@@ -37,15 +37,28 @@
 		// 		width: 50%;
 		// 	}
 		// }
-		@media (max-width: 400px) {
-			width: 260px;
+		@media (max-width: 855px) {
+			padding: 0;
+			width: 100%;
 		}
-		// &:hover {
-		// 	transition: 400ms;
-		// 	box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
-		// 		0px 9px 46px 8px rgba(0, 0, 0, 0.06);
-		// 	background-color: rgb(159, 228, 161);
-		// }
+		&:hover {
+			.card-title {
+			animation-name: highlight;
+			animation-duration: 0.75s;
+			animation-fill-mode: forwards;
+			background-size: 200%;
+			background-image: linear-gradient(to right, blanchedalmond 50%, transparent 50%),
+				linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
+			transition: 0.4s;}
+		}
+	}
+	.card-title {
+		font-weight: bold;
+		color: black;
+		font-size: var(--font-size-m);
+		@media (max-width: 400px) {
+			font-size: 1rem;
+		}
 	}
 	// TODO: implement divider component instead
 	.card-divider {
@@ -61,18 +74,22 @@
 	.card-content {
 		display: flex;
 		flex-direction: column;
-		h4 {
+		.card-title {
 			margin-bottom: 0;
+			letter-spacing: -0.5px;
+			text-transform: lowercase;
 			display: -webkit-box;
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
+
 			@media (max-width: 400px) {
 				font-size: 0.75rem;
 			}
 		}
 		p {
 			color: black;
+			margin-top: 0px;
 			@media (max-width: 400px) {
 				font-size: 0.75rem;
 			}

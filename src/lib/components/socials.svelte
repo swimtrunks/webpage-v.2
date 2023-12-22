@@ -19,7 +19,7 @@
 		href="https://github.com/swimtrunks"
 		target="_blank"
 		rel="noopener"
-		title="-checkout my GitHub"
+		title="-Checkout my GitHub"
 	>
 		<GitHubIcon />
 	</a>
@@ -44,17 +44,23 @@
 <style lang="scss">
 	.socials {
 		display: flex;
-		padding-top: 1rem;
+		flex-direction: column;
+		padding-right: 1.5rem;
 		justify-content: space-evenly;
 		align-items: center;
 		gap: 20px;
 		a {
 			width: 24px;
+			transition: transform 0.2s;
 			color: black;
 			fill: black;
 			&:hover {
+				transform: scale(1.5);
 				color: green;
 				fill: green;
+			}
+			@media (max-width: 855px) {
+				width: 35px;
 			}
 		}
 	}
