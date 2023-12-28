@@ -156,7 +156,7 @@
 		text-indent: -1rem;
 		flex: 50%;
 		@media (max-width: 855px) {
-			width: 400px;
+			max-width: 440px;
 			text-align: justify;
 		}
 	}

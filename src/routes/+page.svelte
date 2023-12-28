@@ -10,12 +10,6 @@
 	export let data;
 	let { posts } = data;
 
-	const messages = [
-		"Hello, I'm Malcolm Peterson",
-		"I'm a software engineer",
-		"I'm a husband, father, and dog owner",
-		"I'm a video game encyclopedia and collector"
-	];
 </script>
 
 <div class="homepage">

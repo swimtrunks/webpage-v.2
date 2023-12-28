@@ -135,15 +135,13 @@
 </script>
 
 <section id="work-section">
-	<section id="projects">
+	<section id="project-list">
 		{#each projects as project}
 			<div>
-				<span class="definition-number">0{project.id}</span>
 				<a href="#/" on:click={() => (selectedProject = project.id)}
 					class = {project.id === selectedProject ? "active-project" : ""}>
-					<strong>{project.name}</strong>
+					<strong>0{project.id}.{project.name}</strong>
 				</a>
-
 				<br />
 			</div>
 		{/each}
@@ -155,10 +153,10 @@
 				{#each projects as project}
 					{#if project.id === selectedProject}
 						<div class="project active" transition:fly={{ x: 1000, duration: 1000 }}>
-							<div class="project-image-section">
+							<!-- <div class="project-image-section">
 								<img class="project-brand" src={project.projectBrand} alt="" />
 								<img class="project-screenshot" src={project.screenshot} alt="" />
-							</div>
+							</div> -->
 							<div>
 								<div class="project-name">
 									{project.dict_name}
@@ -183,7 +181,7 @@
 		{:else}
 			<!-- Default content when no option is selected -->
 			<div>
-				<p>Choose a project from the sidebar to see details.</p>
+				<p>Choose a project from above to see details.</p>
 			</div>
 		{/if}
 	</div>
@@ -192,29 +190,26 @@
 <style lang="scss">
 	#work-section {
 		display: flex;
-		width: 1350px;
-		margin-top: 3rem;
-		margin-bottom: 10rem;
-		flex-direction: row;
+		height: 22rem;
+		min-width: 0;
+		max-width:65%;
+		margin: 0 auto;
+		flex-direction: column;
 		gap: 1rem;
 	}
 	h1 {
 		font-size: 2rem;
 	}
-	select {
-		width: 30%;
-		height: 60px;
-		border-radius: 10px;
-		border: 1px solid rgba(8, 93, 8, 0.294);
-		padding: 10px;
-		font-family: Lexend Deca;
-		font-size: var(--font-size-m);
-	}
-	#projects {
+	#project-list {
+		overflow-x: scroll;
+		min-width:0;
 		margin-bottom: 25px;
-		flex-direction: column;
+		flex-direction: row;
 		display: flex;
+		gap: 1rem;
 		a {
+			display: block;
+			white-space: nowrap;
 			transition: 0.3s;
 			color: black;
 			&:hover{
@@ -236,7 +231,7 @@
 		display: flex;
 		flex-direction: column;
 		border-radius: 10px;
-		width: 1120px;
+		width: auto;
 		padding-right: 40px;
 		h2 {
 			margin-top: 0;
@@ -244,21 +239,21 @@
 		.project-phonetic {
 			font-size: 1rem;
 		}
-		.project-brand {
-			position: absolute;
-			width: 300px;
-			right: -40px;
-			top: -107px;
-			box-shadow: none;
-			z-index: 1;
-		}
-		.project-screenshot {
-			position: absolute;
-			width: 248px;
-			right: 180px;
-			top: -71px;
-			border: 1px solid rgba(8, 93, 8, 0.294);
-		}
+		// .project-brand {
+		// 	position: absolute;
+		// 	width: 300px;
+		// 	right: -40px;
+		// 	top: -107px;
+		// 	box-shadow: none;
+		// 	z-index: 1;
+		// }
+		// .project-screenshot {
+		// 	height:148px;
+		// 	width:300px;
+		// 	right: 180px;
+		// 	top: -71px;
+		// 	border: 1px solid rgba(8, 93, 8, 0.294);
+		// }
 	}
 	.project-select {
 		position: relative;
@@ -267,13 +262,12 @@
 		cursor: pointer;
 		visibility: visible;
 	}
-	.project-text {
-		width: 670px;
-	}
-	.project-image-section {
-		position: relative;
-		left: 75%;
-	}
+	// .project-text {
+
+	// }
+	// .project-image-section {
+
+	// }
 
 	#projects {
 		margin-bottom: 25px;
@@ -284,7 +278,7 @@
 	.project-card {
 		position: relative;
 		border-radius: 10px;
-		width: 1120px;
+		width: auto;
 		padding-right: 40px;
 	}
 
