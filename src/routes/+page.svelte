@@ -16,7 +16,7 @@
 	<About />
 	<Divider
 		fullWidth={true}
-		dividerText={'now playing:"wow that was fast" by lil nas x, || most played genre this week: "pop" || total scrobbles this month: "1000"'}
+		dividerText={'book :" the Creative Gene " by Hideo Kojima || album : " V4 Visions OF LOVE & ANDROIDS " - Various Artist / Numero Group  || video game: "Alan Wake 2" '}
 	/>
 	<ProjectSection />
 	<BlogSection {posts} />

@@ -41,25 +41,12 @@
 			padding: 0;
 			width: 100%;
 		}
-		&:hover {
-			.card-title {
-			animation-name: highlight;
-			animation-duration: 0.75s;
-			animation-fill-mode: forwards;
-			background-size: 200%;
-			background-image: linear-gradient(to right, blanchedalmond 50%, transparent 50%),
-				linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
-			transition: 0.4s;}
+			&:hover {
+				.card-title {
+					color: #688d5e;	
+				}
+			}
 		}
-	}
-	.card-title {
-		font-weight: bold;
-		color: black;
-		font-size: var(--font-size-m);
-		@media (max-width: 400px) {
-			font-size: 1rem;
-		}
-	}
 	// TODO: implement divider component instead
 	.card-divider {
 		margin-top: 1rem;

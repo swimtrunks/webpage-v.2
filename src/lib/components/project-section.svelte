@@ -3,8 +3,9 @@
 	import { quintOut } from 'svelte/easing';
 	import Tooltip from '$lib/components/common/tooltip.svelte';
 
-	let selectedProject = '';
-	// Get references to the select element and the project content div
+	const linkIcon = `
+	<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M444.5 3.5L28.7 195.4c-48 22.4-32 92.8 19.2 92.8h175.9v175.9c0 51.2 70.4 67.2 92.8 19.2l191.9-415.8c16-38.4-25.6-80-64-64z"/></svg> visit website
+	`;
 	const projects = [
 		{
 			id: '0',
@@ -13,11 +14,7 @@
 			projectBrand: 'images/elmo-cookie.png',
 			screenshot: 'images/sw-screenshot.png',
 			content: `
-			<div>
-				Sesame Workshop is the nonprofit educational organization behind Sesame Street. They desired a redesign of their website to improve the user experience and increase engagement as well as a new CMS to allow for easy content updates. Solution involved migration of eight disparate websites/properties into a single cohesive website, achieving a consistent design. 
-				<br /><br />
-				We built and implemented a new design system with <strong> JavaScript, HTML/CSS </strong> and <strong> Twig </strong> as our templating engine. This website is used by over 150k users on a daily basis. Leveraged <strong>WordPress/PHP </strong> with <strong>Gutenberg</strong> to develop a user-friendly CMS for internal users to add content. Additionally, the work included an overall improvement in the developer experience by making components reusable and accessible, and performed upgrades to improve site performance. <a href='https://sesameworkshop.org/' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div>
+			
 			`,
 			phonetic_name: '\\ˈsɛsəmi ˈwɜrkˌʃɑp\\ - noun'
 		},
@@ -29,11 +26,7 @@
 			screenshot: 'images/drizly-screenshot.png',
 			content: `
 			<div>
-				<div>
-					Drizly is an e-commerce platform that allows users to order a variety of beer, wine, and spirits directly from local retailers. Leveraging <strong> Storybook, React, TypeScript, </strong> and third-party libraries, I created reusable and accessible components, testing them with unit tests using <strong>Jest</strong> and the <strong>React Testing Library</strong>. Additionally, I assisted in writing the GitHub README and Confluence documentation to assist others with the implementation and maintance of the design system.
-					<br /><br />
-					To achieve optimal performance and maintainability, I followed best practices such as modular code architecture, code linting, and automated testing. I also implemented continuous integration and deployment pipelines using tools like <strong> Jenkins </strong> and <strong>Docker</strong>. <a href='https://drizly.com/' target="_blank" rel="noreferrer">visit website</a>.
-				</div>
+				
 			</div>
 			`,
 			phonetic_name: `\\ˈdrɪzəli\\ - noun`
@@ -45,9 +38,6 @@
 			projectBrand: 'images/mittr-logo.png',
 			screenshot: 'images/mittr-screenshot.png',
 			content: `
-			<div>
-				MIT Tech Review is a magazine that provides analysis, insight, and commentary on the future of technology. I assisted in website maintaence including dependency grooming, bug fixes, ongoing feature development and project-wide refactoring to improve performance, usability, and code quality. Audited software for accessibility improvements, including WCAG AA compliance and screen reader optimization. We used <strong>React, PHP, </strong> and <strong> WordPress</strong> to build out the site. <br /><br /> <a href='https://technologyreview.com' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div>
 			`,
 			phonetic_name: `\\ˈɛˈmaɪˈti tɛkˈnɑləʤi ˌriˈvju\\ - noun`
 		},
@@ -58,11 +48,6 @@
 			projectBrand: 'images/sagesure-logo.webp',
 			screenshot: 'images/sagesure-screenshot.png',
 			content: `
-			<div>
-				Sagesure is a property and casualty insurance company that provides essential property insurance products and services to agents and policyholders.
-				The client wanted to drive consistent traffic to the customer portal year round by offering value in the form of home inspection reviews and customer programs. We optimized the customer portal with features that enabled users to view home inspection data, available upgrades, alerts, assisted with connecting the user with contractors and future considerations for repairs. To achieve this, we used <strong> React, Node, SASS, GraphQL</strong> and third party APIs to display and store the relevant data. <br /> <br />
-				In addition, I assited with building out design system components and collaborated with Product Managers to integrate features based on insights gleaned from data analysis using <strong> MixPanel </strong>. Also worked with A/B testing and feature flags using <strong> LaunchDarkly </strong>. <a href='https://sagesure.com/' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div>
 			`,
 			phonetic_name: `\\seɪʤʃʊr\\ - noun`
 		},
@@ -73,9 +58,6 @@
 			projectBrand: 'images/mamaknows-logo.jpg',
 			screenshot: 'images/mamaknows-screenshot.png',
 			content: `
-			<div>
-				Implemented customer portal features that enabled users to view home inspection data, available upgrades, and future considerations for repairs. To achieve this, we leveraged React, GraphQL, and REST APIs to display and surface the relevant data. In addition, I helped establish design system components and collaborated with Product Managers to integrate features based on insights gleaned from data analysis using MixPanel. Also worked with A/B testing and feature flags using LaunchDarkly. <a href='https://tristanrichardson.com/' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div> -->
 			`,
 			phonetic_name: `\\ˈmɑmə nōz\\ - noun`
 		},
@@ -86,9 +68,6 @@
 			projectBrand: 'images/textmoji-logo.png',
 			screenshot: 'images/textmoji-screenshot.png',
 			content: `
-			<div>
-				Textmoji is a web app that allows users to create their <strong>React, SASS, and the Emojipedia API</strong>. <br /><br /> <a href='https://textmoji.app/' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div>
 			`,
 			phonetic_name: `\\ˈtɛkstˈmoʊʤi\\ - noun`
 		},
@@ -99,8 +78,6 @@
 			projectBrand: '',
 			screenshot: '',
 			content: `
-			<div>
-				Last year I decided to make a personal site that for fun that showcased a little more of my personality than a few links and a quick blurb. This year I have decided to take it a little further and upgrade it to SvelteKit2.0. I have designed this site from scratch, built it with SvelteKit and SCSS. Its funny how much you can learn about the fundamentals of design by breaking as many rules as possible (just to go back and correct your mistakes). I have written a little about it <br /><br /> <a href='https://play.date/' target="_blank" rel="noreferrer"> here</a>
 			</div>
 			`,
 			phonetic_name: `ˈmælkəmˈpitərsən.kɑm`
@@ -112,9 +89,6 @@
 			projectBrand: '',
 			screenshot: '',
 			content: `
-			<div>
-				<a href='https://play.date/' target="_blank" rel="noreferrer"> (visit website) </a>
-			</div>
 			`,
 			phonetic_name: `tba`
 		}
@@ -135,171 +109,162 @@
 </script>
 
 <section id="work-section">
-	<section id="project-list">
-		{#each projects as project}
-			<div>
-				<a href="#/" on:click={() => (selectedProject = project.id)}
-					class = {project.id === selectedProject ? "active-project" : ""}>
-					<strong>0{project.id}.{project.name}</strong>
-				</a>
-				<br />
+	<div class= "section-heading">experience:</div>
+	<section class="work-grid">
+		<div>
+			<h3><span class="card-title">Launch by NTT Data</span></h3>
+			<div class = "job-titles">
+				<p>
+					Software Engineer <span>(2022 - Present)</span>
+					<br />
+					Associate Engineer <span>(2021 - 2022)</span>
+				</p>
+				
 			</div>
-		{/each}
+		</div>
+		<div>
+			<h3><span class="card-title">noWhere Studios - Freelance</span></h3>
+			<div class = "job-titles">
+				<p>Web Developer / Designer <span>(2019 - 2021)</span></p>
+			</div>
+		</div>
 	</section>
-	<div class="project-card">
-		<div id="project-heading" class="section-heading">work</div>
-		{#if selectedProject !== ''}
+	<div class= "section-heading">projects:</div>
+	<section class="work-grid">
+		<div>
+			<h3>
+				<span class="card-title">Sesame Workshop</span>
+				<a href="https://sesameworkshop.org/" target="_blank" rel="noreferrer">
+					{@html linkIcon}
+				</a>
+			</h3>
 			<div>
-				{#each projects as project}
-					{#if project.id === selectedProject}
-						<div class="project active" transition:fly={{ x: 1000, duration: 1000 }}>
-							<!-- <div class="project-image-section">
-								<img class="project-brand" src={project.projectBrand} alt="" />
-								<img class="project-screenshot" src={project.screenshot} alt="" />
-							</div> -->
-							<div>
-								<div class="project-name">
-									{project.dict_name}
-									<span class="project-phonetic">
-										{project.phonetic_name}.
-									</span>
-								</div>
-								<div class="project-text">
-									{#if project.id === '7'}
-										Earlier this year I needed an excuse to buy a <Tooltip info={playdateInfo} />,
-										so I decided I would use it to learn game development.I have explored the C and
-										Lua API's and still haven't made much progress on it but I am keeping tabs on my
-										thoughts here and I'm excited to see where it goes.
-									{/if}
-									{@html project.content}
-								</div>
-							</div>
-						</div>
-					{/if}
-				{/each}
+				Sesame Workshop, the nonprofit behind Sesame Street, underwent a website redesign for improved user experience and engagement. We consolidated eight websites into one cohesive platform, implementing a new design system with <strong>JavaScript, HTML/CSS, Figma</strong> and <strong>Twig</strong>. The site serves over 150k users daily, with a user-friendly CMS powered by <strong>WordPress/PHP, Advanced Custom Fields</strong> and <strong>Gutenberg</strong>.
 			</div>
-		{:else}
-			<!-- Default content when no option is selected -->
+		</div>
+		<div>
+			<h3>
+				<span class="card-title">Drizly</span>
+				<a href="https://drizly.com/" target="_blank" rel="noreferrer">{@html linkIcon}</a>
+			</h3>
 			<div>
-				<p>Choose a project from above to see details.</p>
+				Drizly, an e-commerce platform for alcohol orders, involved creating reusable components using <strong>Storybook, React/TypeScript, </strong> and <strong>CSS-in-JS</strong>. I contributed to documentation and ensured optimal performance through modular code, linting, and testing with Jest. Continuous integration and deployment pipelines were established with Jenkins and Docker.
 			</div>
-		{/if}
-	</div>
+		</div>
+		<div>
+			<h3>
+				<span class="card-title">Sagesure</span> 
+				<a href="https://sagesure.com/" target="_blank" rel="noreferrer"> {@html linkIcon} </a>
+			</h3>
+			<div>
+				Sagesure, a property insurance company, aimed to boost traffic to its customer portal. We optimized the portal with <strong>React, Node, SASS </strong>and <strong>GraphQL</strong>. We implemented features such as home inspection data from a 3rd party, contractor connections via Thumbtack and targeted marketing campaigns for selected users upon qualification. I also built design system components, tracked user interactions with <strong>Mixpanel</strong> and implemented A/B testing with <strong>LaunchDarkly</strong>.
+			</div>
+		</div>
+		<div>
+			<h3>
+				<span class="card-title">MIT Tech Review</span>  
+				<a href="https://technologyreview.com" target="_blank" rel="noreferrer">
+					{@html linkIcon}
+				</a>
+			</h3>
+			<div>
+				For MIT Tech Review, I contributed to website maintenance, bug fixes, and ongoing feature development using <strong>React, PHP,</strong> and <strong> WordPress</strong>. Accessibility improvements were made for WCAG AA compliance and screen reader optimization. The focus was on enhancing performance, usability, and code quality.
+			</div>
+		</div>
+		<div>
+			<h3>
+				<span class="card-title">Textmoji</span> 
+				<a href="https://textmoji.app/" target="_blank" rel="noreferrer"> {@html linkIcon} </a>
+			</h3>
+			<div>
+				Textmoji is a fun application that is meant for users to design and export their custom text
+				based emoji into their Slack workspaces for all to use. I was brought on to this project in
+				order to modernize the application and lead a team of engineers in the development of a new
+				webpage design and implementing new components and a11y features such as keyboard navigation
+				and color contrast checker. The site was built with <strong>
+					Sveltekit, SCSS, WebGL, and PixiJS
+				</strong>.
+			</div>
+		</div>
+		<div>
+			<h3>
+				<span class="card-title"> Richardson Family & Ed Consulting</span>
+				<a href="https://tristanrichardson.com/" target="_blank" rel="noreferrer">
+					{@html linkIcon}
+				</a>
+			</h3>
+			<div>
+				I was the sole developer for this site and worked closely with the client to assist with designing the website and implementing the features they wanted. It was built on top of the <strong>WordPress</strong> plaform but also required new themes to be implemented as well. I also was an administrator for the discord group as well as providing guidance and ongoing maintenance. 
+			</div>
+		</div>
+	</section>
 </section>
 
 <style lang="scss">
 	#work-section {
+		padding-top: 2rem;
 		display: flex;
-		height: 22rem;
 		min-width: 0;
-		max-width:65%;
+		max-width: 85%;
 		margin: 0 auto;
 		flex-direction: column;
-		gap: 1rem;
 	}
 	h1 {
 		font-size: 2rem;
 	}
-	#project-list {
-		overflow-x: scroll;
-		min-width:0;
-		margin-bottom: 25px;
-		flex-direction: row;
+	h3{
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.work-grid {
+		max-width: 1000px;
+		margin-bottom: 25px;
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
 		gap: 1rem;
+		flex-wrap: wrap;
+		& > div {
+			padding-bottom: 1rem;
+		}
+		h3 {
+			margin-bottom: 0;
+		}
 		a {
-			display: block;
+			display: inline-block;
 			white-space: nowrap;
 			transition: 0.3s;
-			color: black;
-			&:hover{
-				animation-name: highlight;
-				animation-duration: 0.75s;
-				animation-fill-mode: forwards;
-				background-size: 200%;
-				background-image: linear-gradient(to right, blanchedalmond 50%, transparent 50%),
-					linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
-				transition: 0.4s;
+			color: #688d5e;
+			&:hover {
+				color: #284520;
 			}
+		}
+		@media (max-width: 855px) {
+			grid-template-columns: 100%;
 		}
 	}
 	#project-heading {
 		margin-top: -2.5rem;
 	}
-	.project-card {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		border-radius: 10px;
-		width: auto;
-		padding-right: 40px;
-		h2 {
-			margin-top: 0;
-		}
-		.project-phonetic {
-			font-size: 1rem;
-		}
-		// .project-brand {
-		// 	position: absolute;
-		// 	width: 300px;
-		// 	right: -40px;
-		// 	top: -107px;
-		// 	box-shadow: none;
-		// 	z-index: 1;
-		// }
-		// .project-screenshot {
-		// 	height:148px;
-		// 	width:300px;
-		// 	right: 180px;
-		// 	top: -71px;
-		// 	border: 1px solid rgba(8, 93, 8, 0.294);
-		// }
-	}
-	.project-select {
-		position: relative;
-	}
+
 	.project-select:hover .tooltip {
 		cursor: pointer;
 		visibility: visible;
 	}
-	// .project-text {
-
-	// }
-	// .project-image-section {
-
-	// }
-
 	#projects {
 		margin-bottom: 25px;
 		display: flex;
 		flex-direction: column;
 	}
-
-	.project-card {
-		position: relative;
-		border-radius: 10px;
-		width: auto;
-		padding-right: 40px;
-	}
-
-	.project {
-		background-color: white;
-		position: absolute;
-		padding: 2rem;
-		border-radius: 1rem;
-		border: 1px solid rgba(8, 93, 8, 0.294);
-		top: 0;
-		left: 0;
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity 0.5s;
-	}
-
-	.project.active {
-		opacity: 1;
-		pointer-events: all;
-	}
-	.active-project {
-		background-image: linear-gradient(transparent 50%, rgb(159, 228, 161) 50%);
+	.job-titles {
+		p {
+			padding: 0;
+			margin: 0;
+		}
+		
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 </style>

@@ -6,7 +6,7 @@
 
 <section id="blog-section">
 	<div class="section-heading">
-		writing
+		writing:
 	</div>
 	<div class="recent-posts">
 		{#each posts as post}
@@ -23,7 +23,7 @@
 		display: flex;
 		margin: 0 auto;
 		flex-direction: column;
-		max-width: 65%;
+		max-width: 85%;
 	}
 	.recent-posts {
 		background-image: radial-gradient(circle at 1px 1px, green 1px, transparent 0);

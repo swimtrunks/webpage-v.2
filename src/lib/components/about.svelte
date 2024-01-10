@@ -104,6 +104,10 @@
 		flex-direction: column;
 		max-width: 1000px;
 		background-size: 30px 30px;
+		@media (max-width: 855px) {
+			width: 85%;	
+			margin: 0 auto;
+		}
 	}
 	.first-section {
 		display: flex;
@@ -111,6 +115,9 @@
 		img {
 			width: 100%;
 			height: 100%;
+		}
+		@media (max-width: 855px) {
+			max-width: 100%;
 		}
 	}
 	.about-me-core {
@@ -142,8 +149,8 @@
 			}
 		}
 		@media (max-width: 855px) {
-			height: 250px;
-			width: 400px;
+			height: 210px;
+			width: 610px;
 		}
 		flex: 50%;
 	}
@@ -156,7 +163,6 @@
 		text-indent: -1rem;
 		flex: 50%;
 		@media (max-width: 855px) {
-			max-width: 440px;
 			text-align: justify;
 		}
 	}

@@ -127,7 +127,14 @@ a {
 .fullWidth {
 	width: 100%;
 }
-
+.card-title {
+	font-weight: bold;
+	color: black;
+	font-size: var(--font-size-m);
+	@media (max-width: 400px) {
+		font-size: 1rem;
+	}
+}
 @keyframes highlight {
     from {
       background-position: 0;
