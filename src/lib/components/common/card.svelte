@@ -16,27 +16,13 @@
 		padding: 1rem;
 		background-color: transparent;
 		text-decoration: none;
-		// border-radius: 0.5rem;
-		// box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.1), 0px 4px 5px rgba(0, 0, 0, 0.07),
-		// 	0px 1px 10px rgba(0, 0, 0, 0.06);
 		display: flex;
 		flex-direction: column;
 		width: 50%;
-		// height: 20rem;
-		//TODO: handle responsiveness here for tablet / mid sizes
 		img {
 			height: 150px;
 			width: 100%;
 		}
-		// @media (max-width: 855px) {
-		// 	flex-direction: row;
-		// 	height: 10rem;
-		// 	width: 100%;
-		// 	max-width: 400px;
-		// 	img {
-		// 		width: 50%;
-		// 	}
-		// }
 		@media (max-width: 855px) {
 			padding: 0;
 			width: 100%;
@@ -47,7 +33,6 @@
 				}
 			}
 		}
-	// TODO: implement divider component instead
 	.card-divider {
 		margin-top: 1rem;
 		width: 5rem;
@@ -69,17 +54,10 @@
 			-webkit-line-clamp: 1;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
-
-			@media (max-width: 400px) {
-				font-size: 0.75rem;
-			}
 		}
 		p {
 			color: black;
 			margin-top: 0px;
-			@media (max-width: 400px) {
-				font-size: 0.75rem;
-			}
 		}
 	}
 </style>

@@ -14,7 +14,7 @@
 		{/each}
 	</div>
 	<div id="recent-posts-title-card">
-		<Button text="*read more" link="/blog" />
+		<Button text="read more" link="/blog" />
 	</div>
 </section>
 

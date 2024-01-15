@@ -23,6 +23,8 @@
 		text-decoration: none;
 		background-color: rgba(255, 255, 255, 0.328);
 		border-radius: 1rem;
+		box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.1), 0px 24px 38px 3px rgba(0, 0, 0, 0.07),
+				0px 9px 46px 8px rgba(0, 0, 0, 0.06);
 		&:hover {
 			transition: 500ms;
 			background-color: rgba(255, 255, 255, 0.698);
@@ -30,8 +32,8 @@
 				0px 9px 46px 8px rgba(0, 0, 0, 0.06);
 		}
 		@media (max-width: 500px) {
-			flex-direction: column;
-			align-items: center;
+			// flex-direction: column;
+			// align-items: center;
 		}
 	}
 	h1 {
@@ -40,7 +42,7 @@
 	h2{
 		text-transform: uppercase;
 		font-family: Bebas Neue;
-		font-size: 4rem;
+		font-size: 2rem;
 		margin-bottom: 0;
 	}
 	section {
@@ -50,6 +52,8 @@
 	.featured-card {
 		display: flex;
 		gap: 1rem;
+		height: 10rem;
+		
 		img {
 			width: 50%;
 			@media (max-width: 500px) {
@@ -59,7 +63,9 @@
 		p {
 			margin-top: 8px;
 			color: black;
-			font-size: 2rem;
+			font-size: 1rem;
+			font-weight: 500;
+			letter-spacing: -0.5px;
 		}
 		span{
 			color: rgb(32, 140, 32)

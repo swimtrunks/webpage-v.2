@@ -10,9 +10,9 @@
 
 <style lang="scss">
 	a {
-		padding: 1rem;
-		font-family: Lexend Deca;
+		padding: .75rem;
 		background-color: green;
+		font-weight:bold;
 		text-decoration: none;
 		border-radius: 0.75rem;
 		transition: all 0.3s ease-in-out;
@@ -26,6 +26,18 @@
 		will-change: contents;
 		margin-left: 1rem;
 		transition: all 0.3s ease-in-out;
+
+		@media screen and (max-width: 768px) {
+			&, a { 
+				display: block;
+				margin-left: 0;
+			}
+			a {
+				width: 100%;
+				text-align: center;
+				
+			}
+		}
 	}
 	.blog-button:hover {
 		transform: scale(1.02);

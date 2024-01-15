@@ -38,6 +38,7 @@
 	--primary-beige: blanchedalmond;
 	--primary-green: green;
 	--secondary-green:rgb(159, 228, 161);
+	--third-green:rgb(104, 141, 94);
 	--primary-white: white;
 	--primary-black: black;
 }
@@ -84,6 +85,11 @@ img {
 a {
 	color:green;
 }
+.page-main-lane {
+	margin: 0 auto;
+	max-width: 85%;
+}
+
 .flattenImage {
 	box-shadow: none !important;
 }
