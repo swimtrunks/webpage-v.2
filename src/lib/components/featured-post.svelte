@@ -11,7 +11,7 @@
 			<p>
 				{post.excerpt}
 			</p>
-			<span>published: {post.date}</span>
+			<!-- <span>published: {post.date}</span> -->
 		</div>
 	</a>
 </section>
@@ -43,6 +43,7 @@
 		text-transform: uppercase;
 		font-family: Bebas Neue;
 		font-size: 2rem;
+		margin-top: 1rem;
 		margin-bottom: 0;
 	}
 	section {
@@ -53,12 +54,8 @@
 		display: flex;
 		gap: 1rem;
 		height: 10rem;
-		
 		img {
 			width: 50%;
-			@media (max-width: 500px) {
-				width: 100%;
-			}
 		}
 		p {
 			margin-top: 8px;
@@ -69,6 +66,15 @@
 		}
 		span{
 			color: rgb(32, 140, 32)
+		}
+		@media (max-width: 500px) {
+			gap: 0.25rem;
+			flex-direction: column;
+			align-items: center;
+			height: unset;
+			img {
+				width: 100%;
+			}
 		}
 	}
 </style>
